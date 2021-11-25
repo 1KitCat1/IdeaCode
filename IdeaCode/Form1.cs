@@ -4,17 +4,124 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 
 namespace IdeaCode
 {
     public partial class Form1 : Form
     {
+        private IconButton currentBtn;
+        private Panel leftBorderBtn;
         public Form1()
         {
             InitializeComponent();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            panel1.Controls.Add(leftBorderBtn);
+            //Disable standart control panel
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+        }
+        //Colors
+        private struct FormColors
+        {
+            public static Color colorYellow = Color.FromArgb(251, 244, 109);
+            public static Color colorGreen  = Color.FromArgb(180, 254, 152);
+            public static Color colorBlue   = Color.FromArgb(119, 228, 212);
+            public static Color colorPurple = Color.FromArgb(153, 140, 235);
+            public static Color colorPink   = Color.FromArgb(255, 115, 136);
+            public static Color colorOrange = Color.FromArgb(255, 171, 76);
+            public static Color colorDarkPurple = Color.FromArgb(133, 120, 215);
+
+
+        }
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if(senderBtn != null)
+            {
+                DisableButton();
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = FormColors.colorDarkPurple;
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //Left border
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+                //Icon current
+                iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                iconCurrentChildForm.IconColor = currentBtn.IconColor;
+
+            }
+        }
+        private void DisableButton()
+        {
+            if(currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(153, 140, 235);
+                currentBtn.ForeColor = Color.OldLace;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.OldLace;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            }
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(153, 140, 235);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButtonTasks_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, FormColors.colorYellow);
+
+        }
+
+        private void iconButtonUsers_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, FormColors.colorPink);
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+            ResetButtons();
+        }
+        private void ResetButtons()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.Navy;
+            lableCurrentChildForm.Text = "Home";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //From dragin
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

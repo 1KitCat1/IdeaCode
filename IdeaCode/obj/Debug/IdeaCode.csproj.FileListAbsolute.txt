@@ -1,0 +1,12 @@
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\IdeaCode.exe.config
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\IdeaCode.exe
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\IdeaCode.pdb
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\FontAwesome.Sharp.dll
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.csprojAssemblyReference.cache
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.Form1.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.Properties.Resources.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.csproj.GenerateResource.cache
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.csproj.CoreCompileInputs.cache
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.csproj.CopyComplete
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.exe
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.pdb
