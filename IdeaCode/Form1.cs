@@ -16,6 +16,7 @@ namespace IdeaCode
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form currentChildForm;
         public Form1()
         {
             InitializeComponent();
@@ -37,6 +38,8 @@ namespace IdeaCode
             public static Color colorPink   = Color.FromArgb(255, 115, 136);
             public static Color colorOrange = Color.FromArgb(255, 171, 76);
             public static Color colorDarkPurple = Color.FromArgb(133, 120, 215);
+            public static Color colorBlackPurple = Color.FromArgb(42, 9, 68);
+            public static Color colorBlackPurpleSel = Color.FromArgb(52, 16, 75);
 
 
         }
@@ -46,7 +49,7 @@ namespace IdeaCode
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = FormColors.colorDarkPurple;
+                currentBtn.BackColor = FormColors.colorBlackPurpleSel;
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -67,7 +70,7 @@ namespace IdeaCode
         {
             if(currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(153, 140, 235);
+                currentBtn.BackColor = FormColors.colorBlackPurple;
                 currentBtn.ForeColor = Color.OldLace;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.OldLace;
@@ -75,9 +78,25 @@ namespace IdeaCode
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
+        private void OpenChildFrom(Form childForm)
+        {
+            if(currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            currentChildForm = childForm;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lableCurrentChildForm.Text = childForm.Text;
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(153, 140, 235);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -105,7 +124,7 @@ namespace IdeaCode
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.Navy;
+            iconCurrentChildForm.IconColor = Color.LemonChiffon;
             lableCurrentChildForm.Text = "Home";
         }
 
@@ -122,6 +141,28 @@ namespace IdeaCode
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void buttonMinControl_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
