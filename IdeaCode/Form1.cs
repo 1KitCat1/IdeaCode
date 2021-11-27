@@ -101,7 +101,9 @@ namespace IdeaCode
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
+            labelTime.Text = DateTime.Now.ToString("T");
+            labelDate.Text = DateTime.Now.ToString("d");
         }
 
         private void iconButtonTasks_Click(object sender, EventArgs e)
@@ -163,6 +165,12 @@ namespace IdeaCode
         private void buttonMinControl_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelTime.Text = DateTime.Now.ToString("T");
+            labelDate.Text = DateTime.Now.ToString("d");
         }
     }
 }

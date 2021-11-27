@@ -29,6 +29,8 @@ namespace IdeaCode
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -38,13 +40,16 @@ namespace IdeaCode
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.buttonMinControl = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.lableCurrentChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureLogoHome = new System.Windows.Forms.PictureBox();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonMinControl = new System.Windows.Forms.Button();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelDate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -213,6 +218,54 @@ namespace IdeaCode
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // buttonMinControl
+            // 
+            this.buttonMinControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMinControl.FlatAppearance.BorderSize = 0;
+            this.buttonMinControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.buttonMinControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMinControl.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMinControl.Location = new System.Drawing.Point(708, 3);
+            this.buttonMinControl.Name = "buttonMinControl";
+            this.buttonMinControl.Size = new System.Drawing.Size(41, 29);
+            this.buttonMinControl.TabIndex = 4;
+            this.buttonMinControl.Text = "-";
+            this.buttonMinControl.UseVisualStyleBackColor = true;
+            this.buttonMinControl.Click += new System.EventHandler(this.buttonMinControl_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(751, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(41, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "□";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(37)))), ((int)(((byte)(104)))));
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonExit.Location = new System.Drawing.Point(796, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(41, 29);
+            this.buttonExit.TabIndex = 2;
+            this.buttonExit.Text = "x";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // lableCurrentChildForm
             // 
             this.lableCurrentChildForm.AutoSize = true;
@@ -241,6 +294,8 @@ namespace IdeaCode
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.panelChildForm.Controls.Add(this.labelDate);
+            this.panelChildForm.Controls.Add(this.labelTime);
             this.panelChildForm.Controls.Add(this.pictureLogoHome);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(200, 70);
@@ -260,53 +315,32 @@ namespace IdeaCode
             this.pictureLogoHome.TabIndex = 1;
             this.pictureLogoHome.TabStop = false;
             // 
-            // buttonExit
+            // labelTime
             // 
-            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(37)))), ((int)(((byte)(104)))));
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonExit.Location = new System.Drawing.Point(796, 3);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(41, 29);
-            this.buttonExit.TabIndex = 2;
-            this.buttonExit.Text = "x";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.labelTime.Location = new System.Drawing.Point(329, 301);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(165, 36);
+            this.labelTime.TabIndex = 2;
+            this.labelTime.Text = "17:32:12";
             // 
-            // button1
+            // timer1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(751, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "□";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // buttonMinControl
+            // labelDate
             // 
-            this.buttonMinControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMinControl.FlatAppearance.BorderSize = 0;
-            this.buttonMinControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.buttonMinControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMinControl.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMinControl.Location = new System.Drawing.Point(708, 3);
-            this.buttonMinControl.Name = "buttonMinControl";
-            this.buttonMinControl.Size = new System.Drawing.Size(41, 29);
-            this.buttonMinControl.TabIndex = 4;
-            this.buttonMinControl.Text = "-";
-            this.buttonMinControl.UseVisualStyleBackColor = true;
-            this.buttonMinControl.Click += new System.EventHandler(this.buttonMinControl_Click);
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
+            this.labelDate.Location = new System.Drawing.Point(347, 346);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(130, 25);
+            this.labelDate.TabIndex = 3;
+            this.labelDate.Text = "27.11.2021";
             // 
             // Form1
             // 
@@ -317,6 +351,7 @@ namespace IdeaCode
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "IdeaCode";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -327,6 +362,7 @@ namespace IdeaCode
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoHome)).EndInit();
             this.ResumeLayout(false);
 
@@ -350,6 +386,9 @@ namespace IdeaCode
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonMinControl;
+        private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelDate;
     }
 }
 
