@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using IdeaCode.ChildForms;
 
 namespace IdeaCode
 {
@@ -109,7 +110,7 @@ namespace IdeaCode
         private void iconButtonTasks_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, FormColors.colorYellow);
-
+            OpenChildFrom(new ChildFormTasks());
         }
 
         private void iconButtonUsers_Click(object sender, EventArgs e)
@@ -120,6 +121,10 @@ namespace IdeaCode
         private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
             ResetButtons();
+            if(currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
         }
         private void ResetButtons()
         {
