@@ -105,6 +105,8 @@ namespace IdeaCode
             timer1.Start();
             labelTime.Text = DateTime.Now.ToString("T");
             labelDate.Text = DateTime.Now.ToString("d");
+            if (labelTime != null && labelTime.Text[1] == ':')
+                labelTime.Text = '0' + labelTime.Text;
         }
 
         private void iconButtonTasks_Click(object sender, EventArgs e)
@@ -116,6 +118,7 @@ namespace IdeaCode
         private void iconButtonUsers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, FormColors.colorPink);
+            OpenChildFrom(new ChildFormUsers());
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)
@@ -176,6 +179,13 @@ namespace IdeaCode
         {
             labelTime.Text = DateTime.Now.ToString("T");
             labelDate.Text = DateTime.Now.ToString("d");
+            if (labelTime != null && labelTime.Text[1] == ':') 
+                labelTime.Text = '0' + labelTime.Text;
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -64,6 +64,12 @@
     <Compile Include="ChildForms\ChildFormTasks.Designer.cs">
       <DependentUpon>ChildFormTasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\ChildFormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildFormUsers.Designer.cs">
+      <DependentUpon>ChildFormUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChildFormTasks.resx">
       <DependentUpon>ChildFormTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChildFormUsers.resx">
+      <DependentUpon>ChildFormUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
