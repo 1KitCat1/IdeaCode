@@ -43,6 +43,7 @@ namespace IdeaCode.Blocks
             this.organisation = organisation;
             this.solved = solved;
             this.rating = rating;
+            this.photo = photo;
 
             this.MainForm = MainForm;
         }

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using IdeaCode.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,11 @@ namespace IdeaCode.InfoForms
             string password, string organisation, int solved, int rating, byte[] photo, Form1 MainForm)
         {
             this.MainForm = MainForm;
+            if(photo != null && photo.Length != 1)
+            {
+                MemoryStream ms = new MemoryStream(photo);
+                pictureBoxUserPhoto.Image = Image.FromStream(ms);
+            }
             InitializeComponent();
         }
 
