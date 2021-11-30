@@ -12,7 +12,8 @@ namespace IdeaCode.AddForms
 {
     public partial class AddUserForm : Form
     {
-        public AddUserForm()
+        Form1 MainForm;
+        public AddUserForm(Form1 MainForm)
         {
             InitializeComponent();
         }

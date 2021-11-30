@@ -14,10 +14,12 @@ namespace IdeaCode.ChildForms
 {
     public partial class ChildFormUsers : Form
     {
+        Form1 MainForm;
         public ChildFormUsers(Form1 MainForm)
         {
             InitializeComponent();
             DataTable usersFromDB;
+            this.MainForm = MainForm;
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {
                 conn.Open();
@@ -46,6 +48,12 @@ namespace IdeaCode.ChildForms
         private void flowLayoutPanelUsers_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void iconButtonAddUser_Click(object sender, EventArgs e)
+        {
+            Form AddUserForm = new AddForms.AddUserForm(MainForm);
+            MainForm.OpenChildFrom(AddUserForm);
         }
     }
 }

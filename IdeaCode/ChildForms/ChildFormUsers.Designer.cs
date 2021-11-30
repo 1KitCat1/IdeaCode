@@ -73,6 +73,7 @@ namespace IdeaCode.ChildForms
             this.iconButtonAddUser.Text = "Add";
             this.iconButtonAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAddUser.UseVisualStyleBackColor = false;
+            this.iconButtonAddUser.Click += new System.EventHandler(this.iconButtonAddUser_Click);
             // 
             // ChildFormUsers
             // 
