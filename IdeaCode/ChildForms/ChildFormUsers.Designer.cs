@@ -40,7 +40,7 @@ namespace IdeaCode.ChildForms
             this.flowLayoutPanelUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelUsers.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelUsers.Name = "flowLayoutPanelUsers";
-            this.flowLayoutPanelUsers.Size = new System.Drawing.Size(800, 450);
+            this.flowLayoutPanelUsers.Size = new System.Drawing.Size(1156, 538);
             this.flowLayoutPanelUsers.TabIndex = 0;
             this.flowLayoutPanelUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelUsers_Paint);
             // 
@@ -48,9 +48,9 @@ namespace IdeaCode.ChildForms
             // 
             this.panel1.Controls.Add(this.iconButtonAddUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(580, 0);
+            this.panel1.Location = new System.Drawing.Point(936, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 450);
+            this.panel1.Size = new System.Drawing.Size(220, 538);
             this.panel1.TabIndex = 1;
             // 
             // iconButtonAddUser
@@ -80,7 +80,7 @@ namespace IdeaCode.ChildForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1156, 538);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanelUsers);
             this.Name = "ChildFormUsers";

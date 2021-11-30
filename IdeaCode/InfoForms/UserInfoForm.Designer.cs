@@ -35,7 +35,7 @@ namespace IdeaCode.InfoForms
             this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
             this.labelUserId = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRealName = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.labelUserEmail = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
@@ -43,6 +43,9 @@ namespace IdeaCode.InfoForms
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.labelUserRating = new System.Windows.Forms.Label();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.labelUserOrganisation = new System.Windows.Forms.Label();
+            this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconButtonEditUser = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -50,15 +53,16 @@ namespace IdeaCode.InfoForms
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxUserPhoto
             // 
             this.pictureBoxUserPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
             this.pictureBoxUserPhoto.Image = global::IdeaCode.Properties.Resources.LogoBoldBig;
-            this.pictureBoxUserPhoto.Location = new System.Drawing.Point(93, 86);
+            this.pictureBoxUserPhoto.Location = new System.Drawing.Point(108, 86);
             this.pictureBoxUserPhoto.Name = "pictureBoxUserPhoto";
-            this.pictureBoxUserPhoto.Size = new System.Drawing.Size(261, 239);
+            this.pictureBoxUserPhoto.Size = new System.Drawing.Size(250, 250);
             this.pictureBoxUserPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxUserPhoto.TabIndex = 18;
             this.pictureBoxUserPhoto.TabStop = false;
@@ -110,7 +114,7 @@ namespace IdeaCode.InfoForms
             this.labelUserId.AutoSize = true;
             this.labelUserId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserId.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelUserId.Location = new System.Drawing.Point(189, 25);
+            this.labelUserId.Location = new System.Drawing.Point(130, 30);
             this.labelUserId.Name = "labelUserId";
             this.labelUserId.Size = new System.Drawing.Size(26, 25);
             this.labelUserId.TabIndex = 22;
@@ -124,24 +128,24 @@ namespace IdeaCode.InfoForms
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Fingerprint;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 41;
-            this.iconPictureBox1.Location = new System.Drawing.Point(132, 18);
+            this.iconPictureBox1.IconSize = 33;
+            this.iconPictureBox1.Location = new System.Drawing.Point(93, 26);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(53, 41);
+            this.iconPictureBox1.Size = new System.Drawing.Size(35, 33);
             this.iconPictureBox1.TabIndex = 21;
             this.iconPictureBox1.TabStop = false;
             // 
-            // label1
+            // labelRealName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label1.Location = new System.Drawing.Point(496, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Denis Riabtsev";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRealName.AutoSize = true;
+            this.labelRealName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRealName.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelRealName.Location = new System.Drawing.Point(496, 140);
+            this.labelRealName.Name = "labelRealName";
+            this.labelRealName.Size = new System.Drawing.Size(179, 25);
+            this.labelRealName.TabIndex = 24;
+            this.labelRealName.Text = "Denis Riabtsev";
+            this.labelRealName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconPictureBox2
             // 
@@ -188,7 +192,7 @@ namespace IdeaCode.InfoForms
             this.labelUserSolved.AutoSize = true;
             this.labelUserSolved.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserSolved.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelUserSolved.Location = new System.Drawing.Point(496, 234);
+            this.labelUserSolved.Location = new System.Drawing.Point(496, 281);
             this.labelUserSolved.Name = "labelUserSolved";
             this.labelUserSolved.Size = new System.Drawing.Size(54, 25);
             this.labelUserSolved.TabIndex = 28;
@@ -203,7 +207,7 @@ namespace IdeaCode.InfoForms
             this.iconPictureBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
             this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox4.IconSize = 41;
-            this.iconPictureBox4.Location = new System.Drawing.Point(439, 227);
+            this.iconPictureBox4.Location = new System.Drawing.Point(439, 274);
             this.iconPictureBox4.Name = "iconPictureBox4";
             this.iconPictureBox4.Size = new System.Drawing.Size(53, 41);
             this.iconPictureBox4.TabIndex = 27;
@@ -214,7 +218,7 @@ namespace IdeaCode.InfoForms
             this.labelUserRating.AutoSize = true;
             this.labelUserRating.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserRating.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelUserRating.Location = new System.Drawing.Point(496, 281);
+            this.labelUserRating.Location = new System.Drawing.Point(496, 328);
             this.labelUserRating.Name = "labelUserRating";
             this.labelUserRating.Size = new System.Drawing.Size(68, 25);
             this.labelUserRating.TabIndex = 30;
@@ -229,11 +233,58 @@ namespace IdeaCode.InfoForms
             this.iconPictureBox5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
             this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox5.IconSize = 41;
-            this.iconPictureBox5.Location = new System.Drawing.Point(439, 274);
+            this.iconPictureBox5.Location = new System.Drawing.Point(439, 321);
             this.iconPictureBox5.Name = "iconPictureBox5";
             this.iconPictureBox5.Size = new System.Drawing.Size(53, 41);
             this.iconPictureBox5.TabIndex = 29;
             this.iconPictureBox5.TabStop = false;
+            // 
+            // labelUserOrganisation
+            // 
+            this.labelUserOrganisation.AutoSize = true;
+            this.labelUserOrganisation.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserOrganisation.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelUserOrganisation.Location = new System.Drawing.Point(496, 234);
+            this.labelUserOrganisation.Name = "labelUserOrganisation";
+            this.labelUserOrganisation.Size = new System.Drawing.Size(104, 25);
+            this.labelUserOrganisation.TabIndex = 32;
+            this.labelUserOrganisation.Text = "KhNURE";
+            this.labelUserOrganisation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // iconPictureBox6
+            // 
+            this.iconPictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.iconPictureBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            this.iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.University;
+            this.iconPictureBox6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox6.IconSize = 41;
+            this.iconPictureBox6.Location = new System.Drawing.Point(439, 227);
+            this.iconPictureBox6.Name = "iconPictureBox6";
+            this.iconPictureBox6.Size = new System.Drawing.Size(53, 41);
+            this.iconPictureBox6.TabIndex = 31;
+            this.iconPictureBox6.TabStop = false;
+            // 
+            // iconButtonEditUser
+            // 
+            this.iconButtonEditUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonEditUser.FlatAppearance.BorderSize = 0;
+            this.iconButtonEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonEditUser.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonEditUser.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonEditUser.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.iconButtonEditUser.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonEditUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonEditUser.IconSize = 30;
+            this.iconButtonEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonEditUser.Location = new System.Drawing.Point(1036, 26);
+            this.iconButtonEditUser.Name = "iconButtonEditUser";
+            this.iconButtonEditUser.Size = new System.Drawing.Size(108, 45);
+            this.iconButtonEditUser.TabIndex = 33;
+            this.iconButtonEditUser.Text = "Edit";
+            this.iconButtonEditUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonEditUser.UseVisualStyleBackColor = false;
             // 
             // UserInfoForm
             // 
@@ -241,13 +292,16 @@ namespace IdeaCode.InfoForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.iconButtonEditUser);
+            this.Controls.Add(this.labelUserOrganisation);
+            this.Controls.Add(this.iconPictureBox6);
             this.Controls.Add(this.labelUserRating);
             this.Controls.Add(this.iconPictureBox5);
             this.Controls.Add(this.labelUserSolved);
             this.Controls.Add(this.iconPictureBox4);
             this.Controls.Add(this.labelUserEmail);
             this.Controls.Add(this.iconPictureBox3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRealName);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.labelUserId);
             this.Controls.Add(this.iconPictureBox1);
@@ -256,7 +310,7 @@ namespace IdeaCode.InfoForms
             this.Controls.Add(this.pictureBoxUserPhoto);
             this.Controls.Add(this.iconButton1);
             this.Name = "UserInfoForm";
-            this.Text = "UserInfoForm";
+            this.Text = "User Info";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -264,6 +318,7 @@ namespace IdeaCode.InfoForms
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +332,7 @@ namespace IdeaCode.InfoForms
         private FontAwesome.Sharp.IconPictureBox iconAuthor;
         private System.Windows.Forms.Label labelUserId;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRealName;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label labelUserEmail;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
@@ -285,5 +340,8 @@ namespace IdeaCode.InfoForms
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Label labelUserRating;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private System.Windows.Forms.Label labelUserOrganisation;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
+        private FontAwesome.Sharp.IconButton iconButtonEditUser;
     }
 }

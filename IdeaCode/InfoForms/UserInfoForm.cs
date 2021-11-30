@@ -18,13 +18,22 @@ namespace IdeaCode.InfoForms
         public UserInfoForm(int idUser, string userName, string realName, string e_mail, 
             string password, string organisation, int solved, int rating, byte[] photo, Form1 MainForm)
         {
+            InitializeComponent();
             this.MainForm = MainForm;
             if(photo != null && photo.Length != 1)
             {
                 MemoryStream ms = new MemoryStream(photo);
                 pictureBoxUserPhoto.Image = Image.FromStream(ms);
             }
-            InitializeComponent();
+            labelUserId.Text = idUser.ToString();
+            labelRealName.Text = realName;
+            labelUserEmail.Text = e_mail;
+            labelUserRating.Text = rating.ToString();
+            labelUserSolved.Text = solved.ToString();
+            labelUserUsername.Text = userName;
+            
+
+            
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
