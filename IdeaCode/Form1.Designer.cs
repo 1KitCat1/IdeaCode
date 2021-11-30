@@ -215,7 +215,7 @@ namespace IdeaCode
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(200, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(840, 70);
+            this.panelTitleBar.Size = new System.Drawing.Size(1059, 70);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -227,7 +227,7 @@ namespace IdeaCode
             this.buttonMinControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMinControl.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMinControl.Location = new System.Drawing.Point(708, 3);
+            this.buttonMinControl.Location = new System.Drawing.Point(927, 3);
             this.buttonMinControl.Name = "buttonMinControl";
             this.buttonMinControl.Size = new System.Drawing.Size(41, 29);
             this.buttonMinControl.TabIndex = 4;
@@ -243,7 +243,7 @@ namespace IdeaCode
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(751, 3);
+            this.button1.Location = new System.Drawing.Point(970, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(41, 29);
             this.button1.TabIndex = 3;
@@ -259,7 +259,7 @@ namespace IdeaCode
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonExit.Location = new System.Drawing.Point(796, 3);
+            this.buttonExit.Location = new System.Drawing.Point(1015, 3);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(41, 29);
             this.buttonExit.TabIndex = 2;
@@ -301,7 +301,7 @@ namespace IdeaCode
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(200, 70);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(840, 490);
+            this.panelChildForm.Size = new System.Drawing.Size(1059, 490);
             this.panelChildForm.TabIndex = 2;
             // 
             // labelDate
@@ -310,7 +310,7 @@ namespace IdeaCode
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
-            this.labelDate.Location = new System.Drawing.Point(347, 363);
+            this.labelDate.Location = new System.Drawing.Point(456, 363);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(130, 25);
             this.labelDate.TabIndex = 3;
@@ -322,7 +322,7 @@ namespace IdeaCode
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.labelTime.Location = new System.Drawing.Point(330, 309);
+            this.labelTime.Location = new System.Drawing.Point(439, 309);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(165, 36);
             this.labelTime.TabIndex = 2;
@@ -334,7 +334,7 @@ namespace IdeaCode
             this.pictureLogoHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureLogoHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureLogoHome.Image = global::IdeaCode.Properties.Resources.LogoBoldBig1;
-            this.pictureLogoHome.Location = new System.Drawing.Point(325, 107);
+            this.pictureLogoHome.Location = new System.Drawing.Point(434, 107);
             this.pictureLogoHome.Name = "pictureLogoHome";
             this.pictureLogoHome.Size = new System.Drawing.Size(178, 120);
             this.pictureLogoHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -351,7 +351,7 @@ namespace IdeaCode
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(228)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1040, 560);
+            this.ClientSize = new System.Drawing.Size(1259, 560);
             this.ControlBox = false;
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTitleBar);
