@@ -14,7 +14,7 @@ namespace IdeaCode.ChildForms
 {
     public partial class ChildFormUsers : Form
     {
-        public ChildFormUsers(Form MainForm)
+        public ChildFormUsers(Form1 MainForm)
         {
             InitializeComponent();
             DataTable usersFromDB;
@@ -30,7 +30,13 @@ namespace IdeaCode.ChildForms
             {
                 foreach(DataRow dr in usersFromDB.Rows)
                 {
-                    flowLayoutPanelUsers.Controls.Add(new BlockUser(dr[1].ToString(), Convert.ToInt32(dr["rating"]), dr["real_name"].ToString(), dr["organisation"].ToString()));
+                    byte[] photo = new byte[1];
+                    if(dr[8] != DBNull.Value)
+                    {
+                        photo = (byte[])dr[8];
+                    }
+                    flowLayoutPanelUsers.Controls.Add(new BlockUser((int)dr[0], dr[1].ToString(), dr[2].ToString(),
+                        dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), (int)dr[6], (int)dr[7], photo, MainForm));
                 }
             }
             /*flowLayoutPanelUsers.Controls.Add(new BlockUser());

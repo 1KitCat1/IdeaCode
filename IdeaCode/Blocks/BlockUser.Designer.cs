@@ -134,6 +134,7 @@ namespace IdeaCode.Blocks
             this.Controls.Add(this.labelUserNick);
             this.Name = "BlockUser";
             this.Size = new System.Drawing.Size(606, 128);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BlockUser_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

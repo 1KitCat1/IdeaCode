@@ -32,23 +32,23 @@ namespace IdeaCode.InfoForms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.labelTaskTitle = new System.Windows.Forms.Label();
-            this.iconMemory = new FontAwesome.Sharp.IconPictureBox();
-            this.iconTime = new FontAwesome.Sharp.IconPictureBox();
-            this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
             this.labelTaskSpace = new System.Windows.Forms.Label();
             this.labelTaskTime = new System.Windows.Forms.Label();
             this.labelTaskAuthor = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.labelTaskTopic = new System.Windows.Forms.Label();
             this.labelTaskComplexity = new System.Windows.Forms.Label();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
+            this.iconTime = new FontAwesome.Sharp.IconPictureBox();
+            this.iconMemory = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,48 +86,6 @@ namespace IdeaCode.InfoForms
             this.labelTaskTitle.TabIndex = 1;
             this.labelTaskTitle.Text = "Find max";
             // 
-            // iconMemory
-            // 
-            this.iconMemory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.iconMemory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconMemory.IconChar = FontAwesome.Sharp.IconChar.Memory;
-            this.iconMemory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconMemory.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMemory.IconSize = 41;
-            this.iconMemory.Location = new System.Drawing.Point(870, 77);
-            this.iconMemory.Name = "iconMemory";
-            this.iconMemory.Size = new System.Drawing.Size(53, 41);
-            this.iconMemory.TabIndex = 2;
-            this.iconMemory.TabStop = false;
-            // 
-            // iconTime
-            // 
-            this.iconTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.iconTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconTime.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            this.iconTime.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconTime.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconTime.IconSize = 41;
-            this.iconTime.Location = new System.Drawing.Point(870, 141);
-            this.iconTime.Name = "iconTime";
-            this.iconTime.Size = new System.Drawing.Size(53, 41);
-            this.iconTime.TabIndex = 3;
-            this.iconTime.TabStop = false;
-            // 
-            // iconAuthor
-            // 
-            this.iconAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.iconAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconAuthor.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconAuthor.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconAuthor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAuthor.IconSize = 41;
-            this.iconAuthor.Location = new System.Drawing.Point(870, 281);
-            this.iconAuthor.Name = "iconAuthor";
-            this.iconAuthor.Size = new System.Drawing.Size(53, 41);
-            this.iconAuthor.TabIndex = 4;
-            this.iconAuthor.TabStop = false;
-            // 
             // labelTaskSpace
             // 
             this.labelTaskSpace.AutoSize = true;
@@ -164,20 +122,6 @@ namespace IdeaCode.InfoForms
             this.labelTaskAuthor.Text = "_KitCat_";
             this.labelTaskAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 41;
-            this.iconPictureBox1.Location = new System.Drawing.Point(870, 210);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(53, 41);
-            this.iconPictureBox1.TabIndex = 12;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // labelTaskTopic
             // 
             this.labelTaskTopic.AutoSize = true;
@@ -202,6 +146,22 @@ namespace IdeaCode.InfoForms
             this.labelTaskComplexity.Text = "800";
             this.labelTaskComplexity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.iconButton1.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(12, 25);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(50, 33);
+            this.iconButton1.TabIndex = 16;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // iconPictureBox2
             // 
             this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
@@ -216,21 +176,61 @@ namespace IdeaCode.InfoForms
             this.iconPictureBox2.TabIndex = 14;
             this.iconPictureBox2.TabStop = false;
             // 
-            // iconButton1
+            // iconPictureBox1
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(12, 25);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(50, 33);
-            this.iconButton1.TabIndex = 16;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 41;
+            this.iconPictureBox1.Location = new System.Drawing.Point(870, 210);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(53, 41);
+            this.iconPictureBox1.TabIndex = 12;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // iconAuthor
+            // 
+            this.iconAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.iconAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconAuthor.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconAuthor.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconAuthor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAuthor.IconSize = 41;
+            this.iconAuthor.Location = new System.Drawing.Point(870, 281);
+            this.iconAuthor.Name = "iconAuthor";
+            this.iconAuthor.Size = new System.Drawing.Size(53, 41);
+            this.iconAuthor.TabIndex = 4;
+            this.iconAuthor.TabStop = false;
+            // 
+            // iconTime
+            // 
+            this.iconTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.iconTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconTime.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.iconTime.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconTime.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconTime.IconSize = 41;
+            this.iconTime.Location = new System.Drawing.Point(870, 141);
+            this.iconTime.Name = "iconTime";
+            this.iconTime.Size = new System.Drawing.Size(53, 41);
+            this.iconTime.TabIndex = 3;
+            this.iconTime.TabStop = false;
+            // 
+            // iconMemory
+            // 
+            this.iconMemory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.iconMemory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconMemory.IconChar = FontAwesome.Sharp.IconChar.Memory;
+            this.iconMemory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconMemory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMemory.IconSize = 41;
+            this.iconMemory.Location = new System.Drawing.Point(870, 77);
+            this.iconMemory.Name = "iconMemory";
+            this.iconMemory.Size = new System.Drawing.Size(53, 41);
+            this.iconMemory.TabIndex = 2;
+            this.iconMemory.TabStop = false;
             // 
             // TaskInfoForm
             // 
@@ -254,11 +254,11 @@ namespace IdeaCode.InfoForms
             this.Name = "TaskInfoForm";
             this.Text = "TaskInfoForm";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

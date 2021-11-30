@@ -46,10 +46,10 @@ namespace IdeaCode.Blocks
 
         private void BlockBlog_MouseClick(object sender, MouseEventArgs e)
         {
-            if (MainForm != null)
+            if(MainForm != null)
             {
                 MainForm.OpenChildFrom(new InfoForms.TaskInfoBlog(1, title, fullBlog, author, dateOfCreation, topic, MainForm));
-
+              
             }
         }
     }
