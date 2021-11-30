@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blocks\BlockBlog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Blocks\BlockBlog.Designer.cs">
+      <DependentUpon>BlockBlog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blocks\BlockUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoForms\TaskInfoBlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForms\TaskInfoBlog.Designer.cs">
+      <DependentUpon>TaskInfoBlog.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoForms\TaskInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Blocks\BlockBlog.resx">
+      <DependentUpon>BlockBlog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Blocks\BlockUser.resx">
       <DependentUpon>BlockUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForms\TaskInfoBlog.resx">
+      <DependentUpon>TaskInfoBlog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoForms\TaskInfoForm.resx">
       <DependentUpon>TaskInfoForm.cs</DependentUpon>
