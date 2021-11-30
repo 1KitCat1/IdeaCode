@@ -172,6 +172,7 @@ namespace IdeaCode
             this.Controls.Add(this.labelTaskTitle);
             this.Name = "BlockTask";
             this.Size = new System.Drawing.Size(606, 128);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BlockTask_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

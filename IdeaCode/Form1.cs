@@ -79,7 +79,7 @@ namespace IdeaCode
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void OpenChildFrom(Form childForm)
+        public void OpenChildFrom(Form childForm)
         {
             if(currentChildForm != null)
             {
@@ -112,13 +112,13 @@ namespace IdeaCode
         private void iconButtonTasks_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, FormColors.colorYellow);
-            OpenChildFrom(new ChildFormTasks());
+            OpenChildFrom(new ChildFormTasks(this));
         }
 
         private void iconButtonUsers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, FormColors.colorPink);
-            OpenChildFrom(new ChildFormUsers());
+            OpenChildFrom(new ChildFormUsers(this));
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)
@@ -186,6 +186,12 @@ namespace IdeaCode
         private void labelTime_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, FormColors.colorOrange);
+            OpenChildFrom(new ChildFormBlogs(this));
         }
     }
 }

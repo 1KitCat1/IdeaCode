@@ -1,7 +1,7 @@
 ﻿
 namespace IdeaCode.ChildForms
 {
-    partial class ChildFormUsers
+    partial class ChildFormBlogs
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,20 @@ namespace IdeaCode.ChildForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanelUsers = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelUsers
-            // 
-            this.flowLayoutPanelUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelUsers.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelUsers.Name = "flowLayoutPanelUsers";
-            this.flowLayoutPanelUsers.Size = new System.Drawing.Size(800, 450);
-            this.flowLayoutPanelUsers.TabIndex = 0;
-            this.flowLayoutPanelUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelUsers_Paint);
-            // 
-            // ChildFormUsers
+            // ChildFormBlogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanelUsers);
-            this.Name = "ChildFormUsers";
-            this.Text = "Users";
+            this.Name = "ChildFormBlogs";
+            this.Text = "Blogs";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelUsers;
     }
 }

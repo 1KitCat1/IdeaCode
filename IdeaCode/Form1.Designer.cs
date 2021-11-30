@@ -133,10 +133,11 @@ namespace IdeaCode
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(200, 60);
             this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "iconButton3";
+            this.iconButton3.Text = "Blogs";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButtonUsers
             // 

@@ -52,11 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blocks\BlockUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Blocks\BlockUser.Designer.cs">
+      <DependentUpon>BlockUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="BlockTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="BlockTask.Designer.cs">
       <DependentUpon>BlockTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ChildFormBlogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildFormBlogs.Designer.cs">
+      <DependentUpon>ChildFormBlogs.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\ChildFormTasks.cs">
       <SubType>Form</SubType>
@@ -76,10 +88,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoForms\TaskInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForms\TaskInfoForm.Designer.cs">
+      <DependentUpon>TaskInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Blocks\BlockUser.resx">
+      <DependentUpon>BlockUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BlockTask.resx">
       <DependentUpon>BlockTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChildFormBlogs.resx">
+      <DependentUpon>ChildFormBlogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChildFormTasks.resx">
       <DependentUpon>ChildFormTasks.cs</DependentUpon>
@@ -89,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForms\TaskInfoForm.resx">
+      <DependentUpon>TaskInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

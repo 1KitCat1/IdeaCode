@@ -13,3 +13,6 @@ E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.pdb
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.ChildForms.ChildFormTasks.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.BlockTask.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.ChildForms.ChildFormUsers.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.Blocks.BlockUser.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.InfoForms.TaskInfoForm.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.ChildForms.ChildFormBlogs.resources

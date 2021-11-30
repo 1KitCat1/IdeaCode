@@ -12,12 +12,12 @@ namespace IdeaCode.ChildForms
 {
     public partial class ChildFormTasks : Form
     {
-        public ChildFormTasks()
+        public ChildFormTasks(Form1 MainForm)
         {
             InitializeComponent();
-            flowLayoutPanel1.Controls.Add(new BlockTask("Find max", "find maximal value", "_KitCat_", 800, "math", 1000, 128));
+            flowLayoutPanel1.Controls.Add(new BlockTask("Find max", "find maximal value", "_KitCat_", 800, "math", 1000, 128, MainForm));
             flowLayoutPanel1.Controls.Add(new BlockTask("Sort array", "Given n and array length n. Print it in sorted way"
-                , "_KitCat_", 800, "construct", 1000, 256));
+                , "_KitCat_", 800, "construct", 1000, 256, MainForm));
             /*flowLayoutPanel1.Controls.Add(new BlockTask());*/
         }
     }
