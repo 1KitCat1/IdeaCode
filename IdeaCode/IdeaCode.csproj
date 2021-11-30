@@ -58,6 +58,7 @@
     <Compile Include="AddForms\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppData.cs" />
     <Compile Include="Blocks\BlockBlog.cs">
       <SubType>UserControl</SubType>
     </Compile>
