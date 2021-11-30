@@ -30,8 +30,8 @@ namespace IdeaCode.InfoForms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelTaskTitle = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.labelTaskTitle = new System.Windows.Forms.Label();
             this.iconMemory = new FontAwesome.Sharp.IconPictureBox();
             this.iconTime = new FontAwesome.Sharp.IconPictureBox();
             this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
@@ -42,6 +42,7 @@ namespace IdeaCode.InfoForms
             this.labelTaskTopic = new System.Windows.Forms.Label();
             this.labelTaskComplexity = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTime)).BeginInit();
@@ -62,17 +63,6 @@ namespace IdeaCode.InfoForms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Statement";
             // 
-            // labelTaskTitle
-            // 
-            this.labelTaskTitle.AutoSize = true;
-            this.labelTaskTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTaskTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
-            this.labelTaskTitle.Location = new System.Drawing.Point(55, 15);
-            this.labelTaskTitle.Name = "labelTaskTitle";
-            this.labelTaskTitle.Size = new System.Drawing.Size(136, 29);
-            this.labelTaskTitle.TabIndex = 1;
-            this.labelTaskTitle.Text = "Find max";
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
@@ -84,6 +74,17 @@ namespace IdeaCode.InfoForms
             this.richTextBox1.Size = new System.Drawing.Size(750, 369);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "Given n and array of length n. Find the maximal value";
+            // 
+            // labelTaskTitle
+            // 
+            this.labelTaskTitle.AutoSize = true;
+            this.labelTaskTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTaskTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.labelTaskTitle.Location = new System.Drawing.Point(142, 22);
+            this.labelTaskTitle.Name = "labelTaskTitle";
+            this.labelTaskTitle.Size = new System.Drawing.Size(136, 29);
+            this.labelTaskTitle.TabIndex = 1;
+            this.labelTaskTitle.Text = "Find max";
             // 
             // iconMemory
             // 
@@ -215,12 +216,29 @@ namespace IdeaCode.InfoForms
             this.iconPictureBox2.TabIndex = 14;
             this.iconPictureBox2.TabStop = false;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(12, 25);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(50, 33);
+            this.iconButton1.TabIndex = 16;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // TaskInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.labelTaskComplexity);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.labelTaskTopic);
@@ -261,5 +279,6 @@ namespace IdeaCode.InfoForms
         private System.Windows.Forms.Label labelTaskTopic;
         private System.Windows.Forms.Label labelTaskComplexity;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

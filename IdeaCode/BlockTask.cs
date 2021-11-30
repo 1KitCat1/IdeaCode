@@ -22,9 +22,10 @@ namespace IdeaCode
         int timeLimit;
         int spaceLimit;
         Form1 MainForm;
+        Form BackForm;
 
         public BlockTask(string taskTitle, string taskStatement, string taskAuthor, int taskComplexity,
-            string topic, int timeLimit, int spaceLimit, Form1 MainForm)
+            string topic, int timeLimit, int spaceLimit, Form1 MainForm, Form BackForm)
         {
             InitializeComponent();
             labelTaskTitle.Text = taskTitle;
@@ -40,6 +41,7 @@ namespace IdeaCode
             this.timeLimit = timeLimit;
             this.spaceLimit = spaceLimit;
             this.MainForm = MainForm;
+            this.BackForm = BackForm;
               
             
         }
@@ -47,7 +49,7 @@ namespace IdeaCode
         private void BlockTask_MouseClick(object sender, MouseEventArgs e)
         {
             Form taskInfo = new TaskInfoForm(taskTitle, taskStatement, taskAuthor, taskComplexity,
-            topic, timeLimit, spaceLimit);
+            topic, timeLimit, spaceLimit, MainForm, BackForm);
             /*taskInfo.Show();*/
             MainForm.OpenChildFrom(taskInfo);
             
