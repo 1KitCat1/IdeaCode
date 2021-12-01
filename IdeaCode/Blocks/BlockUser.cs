@@ -34,6 +34,7 @@ namespace IdeaCode.Blocks
             labelUserRating.Text = rating.ToString();
             labelRealName.Text = realName;
             labelUserOrganisation.Text = organisation;
+            labelUserSolved.Text = solved.ToString();
 
             this.idUser = idUser;
             this.userName = userName;

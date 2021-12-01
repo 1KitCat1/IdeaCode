@@ -36,6 +36,8 @@ namespace IdeaCode.Blocks
             this.labelUserRating = new System.Windows.Forms.Label();
             this.labelUserNick = new System.Windows.Forms.Label();
             this.labelRating = new System.Windows.Forms.Label();
+            this.labelSolved = new System.Windows.Forms.Label();
+            this.labelUserSolved = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +122,36 @@ namespace IdeaCode.Blocks
             this.labelRating.TabIndex = 20;
             this.labelRating.Text = "rating";
             // 
+            // labelSolved
+            // 
+            this.labelSolved.AutoSize = true;
+            this.labelSolved.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSolved.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelSolved.Location = new System.Drawing.Point(172, 54);
+            this.labelSolved.Name = "labelSolved";
+            this.labelSolved.Size = new System.Drawing.Size(75, 25);
+            this.labelSolved.TabIndex = 21;
+            this.labelSolved.Text = "solved";
+            // 
+            // labelUserSolved
+            // 
+            this.labelUserSolved.AutoSize = true;
+            this.labelUserSolved.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserSolved.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            this.labelUserSolved.Location = new System.Drawing.Point(172, 89);
+            this.labelUserSolved.Name = "labelUserSolved";
+            this.labelUserSolved.Size = new System.Drawing.Size(54, 25);
+            this.labelUserSolved.TabIndex = 22;
+            this.labelUserSolved.Text = "174";
+            this.labelUserSolved.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // BlockUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.Controls.Add(this.labelUserSolved);
+            this.Controls.Add(this.labelSolved);
             this.Controls.Add(this.labelRating);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.labelOrganisation);
@@ -149,5 +176,7 @@ namespace IdeaCode.Blocks
         private System.Windows.Forms.Label labelUserRating;
         private System.Windows.Forms.Label labelUserNick;
         private System.Windows.Forms.Label labelRating;
+        private System.Windows.Forms.Label labelSolved;
+        private System.Windows.Forms.Label labelUserSolved;
     }
 }

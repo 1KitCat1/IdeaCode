@@ -21,6 +21,7 @@ namespace IdeaCode
             public static Color colorBlackPurple = Color.FromArgb(42, 9, 68);
             public static Color colorBlackPurpleSel = Color.FromArgb(52, 16, 75);
             public static Color colorError = Color.FromArgb(249, 7, 22);
+            public static Color backColorPurpleLight = Color.FromArgb(59, 24, 95);
         }
     }
 }
