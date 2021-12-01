@@ -20,3 +20,4 @@ E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.Blocks.Blo
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.InfoForms.TaskInfoBlog.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.InfoForms.UserInfoForm.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.AddForms.AddUserForm.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.EditForms.EditFormUser.resources

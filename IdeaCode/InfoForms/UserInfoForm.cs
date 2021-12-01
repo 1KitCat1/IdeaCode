@@ -17,6 +17,15 @@ namespace IdeaCode.InfoForms
     {
         Form1 MainForm;
         int idUser;
+        string userName;
+        string realName;
+        string e_mail;
+        string password;
+        string organisation;
+        int solved;
+        int rating;
+        byte[] photo;
+
         public UserInfoForm(int idUser, string userName, string realName, string e_mail, 
             string password, string organisation, int solved, int rating, byte[] photo, Form1 MainForm)
         {
@@ -36,7 +45,14 @@ namespace IdeaCode.InfoForms
 
             panelConfirmDelete.Visible = false;
             this.idUser = idUser;
-            
+            this.userName = userName;
+            this.realName = realName;
+            this.e_mail = e_mail;
+            this.password = password;
+            this.organisation = organisation;
+            this.solved = solved;
+            this.rating = rating;
+            this.photo = photo;            
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -81,6 +97,12 @@ namespace IdeaCode.InfoForms
                 }
                 conn.Close();
             }
+        }
+
+        private void iconButtonEditUser_Click(object sender, EventArgs e)
+        {
+            MainForm.OpenChildFrom(new EditForms.EditFormUser(idUser, userName, realName, e_mail,
+            password, organisation, solved, rating, photo, MainForm));
         }
     }
 }
