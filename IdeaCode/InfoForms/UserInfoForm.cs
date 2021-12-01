@@ -31,7 +31,8 @@ namespace IdeaCode.InfoForms
             labelUserRating.Text = rating.ToString();
             labelUserSolved.Text = solved.ToString();
             labelUserUsername.Text = userName;
-            
+
+            panelConfirmDelete.Visible = false;
 
             
         }
@@ -42,6 +43,17 @@ namespace IdeaCode.InfoForms
             {
                 MainForm.OpenChildFrom(new ChildForms.ChildFormUsers(MainForm));
             }
+        }
+
+        private void iconButtonDeleteUser_Click(object sender, EventArgs e)
+        {
+            panelConfirmDelete.Visible = true;
+
+        }
+
+        private void iconButtonCancelDelete_Click(object sender, EventArgs e)
+        {
+            panelConfirmDelete.Visible = false;
         }
     }
 }

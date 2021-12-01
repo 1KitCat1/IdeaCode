@@ -37,6 +37,7 @@ namespace IdeaCode.ChildForms
             // 
             // flowLayoutPanelUsers
             // 
+            this.flowLayoutPanelUsers.AutoScroll = true;
             this.flowLayoutPanelUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelUsers.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelUsers.Name = "flowLayoutPanelUsers";
