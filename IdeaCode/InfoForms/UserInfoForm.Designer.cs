@@ -51,6 +51,7 @@ namespace IdeaCode.InfoForms
             this.iconButtonCancelDelete = new FontAwesome.Sharp.IconButton();
             this.iconButtonConfirmDelete = new FontAwesome.Sharp.IconButton();
             this.labelConfirmDelete = new System.Windows.Forms.Label();
+            this.labelErrorMessages = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -363,6 +364,7 @@ namespace IdeaCode.InfoForms
             this.iconButtonConfirmDelete.Text = "Delete";
             this.iconButtonConfirmDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonConfirmDelete.UseVisualStyleBackColor = false;
+            this.iconButtonConfirmDelete.Click += new System.EventHandler(this.iconButtonConfirmDelete_Click);
             // 
             // labelConfirmDelete
             // 
@@ -376,12 +378,24 @@ namespace IdeaCode.InfoForms
             this.labelConfirmDelete.Text = "Confirm:";
             this.labelConfirmDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelErrorMessages
+            // 
+            this.labelErrorMessages.AutoSize = true;
+            this.labelErrorMessages.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelErrorMessages.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelErrorMessages.Location = new System.Drawing.Point(88, 446);
+            this.labelErrorMessages.Name = "labelErrorMessages";
+            this.labelErrorMessages.Size = new System.Drawing.Size(0, 25);
+            this.labelErrorMessages.TabIndex = 36;
+            this.labelErrorMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.labelErrorMessages);
             this.Controls.Add(this.panelConfirmDelete);
             this.Controls.Add(this.iconButtonDeleteUser);
             this.Controls.Add(this.iconButtonEditUser);
@@ -442,5 +456,6 @@ namespace IdeaCode.InfoForms
         private System.Windows.Forms.Label labelConfirmDelete;
         private FontAwesome.Sharp.IconButton iconButtonConfirmDelete;
         private FontAwesome.Sharp.IconButton iconButtonCancelDelete;
+        private System.Windows.Forms.Label labelErrorMessages;
     }
 }
