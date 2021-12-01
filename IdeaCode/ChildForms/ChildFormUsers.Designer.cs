@@ -44,12 +44,19 @@ namespace IdeaCode.ChildForms
             this.labelUserName = new System.Windows.Forms.Label();
             this.labelOrganisation = new System.Windows.Forms.Label();
             this.textBoxOrganisation = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSolvedFrom = new System.Windows.Forms.NumericUpDown();
             this.labelSolved = new System.Windows.Forms.Label();
+            this.numericUpDownSolvedTo = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownRatingTo = new System.Windows.Forms.NumericUpDown();
+            this.labelRating = new System.Windows.Forms.Label();
+            this.numericUpDownRatingFrom = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panelFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxSortOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSolvedFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSolvedTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRatingTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRatingFrom)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelUsers
@@ -128,8 +135,12 @@ namespace IdeaCode.ChildForms
             // panelFilter
             // 
             this.panelFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.panelFilter.Controls.Add(this.numericUpDownRatingTo);
+            this.panelFilter.Controls.Add(this.labelRating);
+            this.panelFilter.Controls.Add(this.numericUpDownRatingFrom);
+            this.panelFilter.Controls.Add(this.numericUpDownSolvedTo);
             this.panelFilter.Controls.Add(this.labelSolved);
-            this.panelFilter.Controls.Add(this.numericUpDown1);
+            this.panelFilter.Controls.Add(this.numericUpDownSolvedFrom);
             this.panelFilter.Controls.Add(this.labelOrganisation);
             this.panelFilter.Controls.Add(this.textBoxOrganisation);
             this.panelFilter.Controls.Add(this.labelUserName);
@@ -272,26 +283,91 @@ namespace IdeaCode.ChildForms
             this.textBoxOrganisation.Size = new System.Drawing.Size(205, 29);
             this.textBoxOrganisation.TabIndex = 11;
             // 
-            // numericUpDown1
+            // numericUpDownSolvedFrom
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
-            this.numericUpDown1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.numericUpDown1.Location = new System.Drawing.Point(6, 235);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(71, 29);
-            this.numericUpDown1.TabIndex = 13;
+            this.numericUpDownSolvedFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.numericUpDownSolvedFrom.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownSolvedFrom.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.numericUpDownSolvedFrom.Location = new System.Drawing.Point(6, 218);
+            this.numericUpDownSolvedFrom.Name = "numericUpDownSolvedFrom";
+            this.numericUpDownSolvedFrom.Size = new System.Drawing.Size(89, 29);
+            this.numericUpDownSolvedFrom.TabIndex = 13;
+            this.numericUpDownSolvedFrom.ValueChanged += new System.EventHandler(this.numericUpDownSolvedFrom_ValueChanged);
             // 
             // labelSolved
             // 
             this.labelSolved.AutoSize = true;
             this.labelSolved.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSolved.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelSolved.Location = new System.Drawing.Point(3, 192);
+            this.labelSolved.Location = new System.Drawing.Point(3, 194);
             this.labelSolved.Name = "labelSolved";
-            this.labelSolved.Size = new System.Drawing.Size(112, 18);
+            this.labelSolved.Size = new System.Drawing.Size(63, 18);
             this.labelSolved.TabIndex = 14;
-            this.labelSolved.Text = "Organisation";
+            this.labelSolved.Text = "Solved";
+            // 
+            // numericUpDownSolvedTo
+            // 
+            this.numericUpDownSolvedTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.numericUpDownSolvedTo.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownSolvedTo.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.numericUpDownSolvedTo.Location = new System.Drawing.Point(119, 218);
+            this.numericUpDownSolvedTo.Maximum = new decimal(new int[] {
+            9000,
+            0,
+            0,
+            0});
+            this.numericUpDownSolvedTo.Name = "numericUpDownSolvedTo";
+            this.numericUpDownSolvedTo.Size = new System.Drawing.Size(89, 29);
+            this.numericUpDownSolvedTo.TabIndex = 15;
+            this.numericUpDownSolvedTo.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDownSolvedTo.ValueChanged += new System.EventHandler(this.numericUpDownSolvedTo_ValueChanged);
+            // 
+            // numericUpDownRatingTo
+            // 
+            this.numericUpDownRatingTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.numericUpDownRatingTo.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownRatingTo.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.numericUpDownRatingTo.Location = new System.Drawing.Point(119, 280);
+            this.numericUpDownRatingTo.Maximum = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
+            this.numericUpDownRatingTo.Name = "numericUpDownRatingTo";
+            this.numericUpDownRatingTo.Size = new System.Drawing.Size(89, 29);
+            this.numericUpDownRatingTo.TabIndex = 18;
+            this.numericUpDownRatingTo.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDownRatingTo.ValueChanged += new System.EventHandler(this.numericUpDownRatingTo_ValueChanged);
+            // 
+            // labelRating
+            // 
+            this.labelRating.AutoSize = true;
+            this.labelRating.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRating.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelRating.Location = new System.Drawing.Point(3, 256);
+            this.labelRating.Name = "labelRating";
+            this.labelRating.Size = new System.Drawing.Size(61, 18);
+            this.labelRating.TabIndex = 17;
+            this.labelRating.Text = "Rating";
+            // 
+            // numericUpDownRatingFrom
+            // 
+            this.numericUpDownRatingFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.numericUpDownRatingFrom.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownRatingFrom.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.numericUpDownRatingFrom.Location = new System.Drawing.Point(6, 280);
+            this.numericUpDownRatingFrom.Name = "numericUpDownRatingFrom";
+            this.numericUpDownRatingFrom.Size = new System.Drawing.Size(89, 29);
+            this.numericUpDownRatingFrom.TabIndex = 16;
+            this.numericUpDownRatingFrom.ValueChanged += new System.EventHandler(this.numericUpDownRatingFrom_ValueChanged);
             // 
             // ChildFormUsers
             // 
@@ -307,7 +383,10 @@ namespace IdeaCode.ChildForms
             this.panelFilter.ResumeLayout(false);
             this.panelFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxSortOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSolvedFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSolvedTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRatingTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRatingFrom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,6 +409,10 @@ namespace IdeaCode.ChildForms
         private System.Windows.Forms.Label labelOrganisation;
         private System.Windows.Forms.TextBox textBoxOrganisation;
         private System.Windows.Forms.Label labelSolved;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownSolvedFrom;
+        private System.Windows.Forms.NumericUpDown numericUpDownRatingTo;
+        private System.Windows.Forms.Label labelRating;
+        private System.Windows.Forms.NumericUpDown numericUpDownRatingFrom;
+        private System.Windows.Forms.NumericUpDown numericUpDownSolvedTo;
     }
 }

@@ -16,6 +16,8 @@ namespace IdeaCode.ChildForms
     {
         Form1 MainForm;
         bool sortAscending = false;
+        bool solvedFilterActive = false;
+        bool ratingFilterActive = false;
         public ChildFormUsers(Form1 MainForm)
         {
             InitializeComponent();
@@ -104,28 +106,58 @@ namespace IdeaCode.ChildForms
         {
             DataTable usersFromDB;
             string query = "SELECT * FROM Users";
+            bool whereUsed = false;
             if(textBoxUserName.Text.Length > 0)
             {
                 query += " WHERE user_name LIKE '%" + textBoxUserName.Text + "%'";
+                whereUsed = true;
             }
             if(textBoxOrganisation.Text.Length > 0)
             {
-                if(textBoxUserName.Text.Length > 0)
+                if(whereUsed)
                 {
                     query += " AND";
                 }
                 else
                 {
                     query += " WHERE";
+                    whereUsed = true;
                 }
                 query += " organisation LIKE '%" + textBoxOrganisation.Text + "%'";
             }
-            if(comboBoxSortBy.Text.Length > 0)
+            if (solvedFilterActive)
+            {
+                if (whereUsed)
+                {
+                    query += " AND";
+                }
+                else
+                {
+                    query += " WHERE";
+                    whereUsed = true;
+                }
+                query += " solved>=" + numericUpDownSolvedFrom.Value.ToString()+ " AND solved<="+numericUpDownSolvedTo.Value.ToString();
+            }
+            if (ratingFilterActive)
+            {
+                if (whereUsed)
+                {
+                    query += " AND";
+                }
+                else
+                {
+                    query += " WHERE";
+                    whereUsed = true;
+                }
+                query += " rating>=" + numericUpDownRatingFrom.Value.ToString() + " AND rating<=" + numericUpDownRatingTo.Value.ToString();
+            }
+            if (comboBoxSortBy.Text.Length > 0)
             {
                 query += " ORDER BY " + comboBoxSortBy.Text;
                 if (!sortAscending)
                     query += " DESC";
             }
+            
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {
                 conn.Open();
@@ -148,6 +180,26 @@ namespace IdeaCode.ChildForms
                         dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), (int)dr[6], (int)dr[7], photo, MainForm));
                 }
             }
+        }
+
+        private void numericUpDownSolvedFrom_ValueChanged(object sender, EventArgs e)
+        {
+            solvedFilterActive = true;
+        }
+
+        private void numericUpDownSolvedTo_ValueChanged(object sender, EventArgs e)
+        {
+            solvedFilterActive = true;
+        }
+
+        private void numericUpDownRatingFrom_ValueChanged(object sender, EventArgs e)
+        {
+            ratingFilterActive = true;
+        }
+
+        private void numericUpDownRatingTo_ValueChanged(object sender, EventArgs e)
+        {
+            ratingFilterActive = true;
         }
     }
 }
