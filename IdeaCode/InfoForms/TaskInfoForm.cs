@@ -15,6 +15,13 @@ namespace IdeaCode.InfoForms
     {
         Form1 MainForm;
         int idTask;
+        string taskTitle;
+        string taskStatement;
+        string taskAuthor;
+        int taskComplexity;
+        string topic;
+        int timeLimit;
+        int spaceLimit;
         public TaskInfoForm()
         {
             InitializeComponent();
@@ -32,6 +39,13 @@ namespace IdeaCode.InfoForms
             labelTaskComplexity.Text = taskComplexity.ToString();
             this.MainForm = MainForm;
             this.idTask = idTask;
+            this.taskTitle = taskTitle;
+            this.timeLimit = timeLimit;
+            this.taskStatement = taskStatement;
+            this.taskAuthor = taskAuthor;
+            this.taskComplexity = taskComplexity;
+            this.topic = topic;
+            this.spaceLimit = spaceLimit;
         }
 
         private void labelTaskSpace_Click(object sender, EventArgs e)
@@ -82,6 +96,12 @@ namespace IdeaCode.InfoForms
                 }
                 conn.Close();
             }
+        }
+
+        private void iconButtonEditTask_Click(object sender, EventArgs e)
+        {
+            MainForm.OpenChildFrom(new EditForms.EditFormTask(idTask, taskTitle, taskStatement, taskAuthor, taskComplexity,
+            topic, timeLimit, spaceLimit, MainForm));
         }
     }
 }
