@@ -117,7 +117,8 @@ namespace IdeaCode.InfoForms
                 document.Open();
 
                 var font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12);
-                var fontBold = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, 2);
+                var fontBold = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, 1);
+
 
                 document.NewPage();
                 document.Add(new Paragraph("Id task: " + idTask, fontBold));

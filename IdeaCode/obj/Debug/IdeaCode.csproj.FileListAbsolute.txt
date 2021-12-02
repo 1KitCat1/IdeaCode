@@ -26,3 +26,4 @@ E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.EditForms.
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\BouncyCastle.Crypto.dll
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\itextsharp.dll
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\itextsharp.xml
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.OtherForms.StatisticForm.resources
