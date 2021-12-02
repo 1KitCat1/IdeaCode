@@ -161,7 +161,7 @@ namespace IdeaCode.OtherForms
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.chartBySolved.Series.Add(series3);
-            this.chartBySolved.Size = new System.Drawing.Size(927, 318);
+            this.chartBySolved.Size = new System.Drawing.Size(846, 318);
             this.chartBySolved.TabIndex = 5;
             this.chartBySolved.Text = "chart1";
             // 

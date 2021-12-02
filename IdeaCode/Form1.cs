@@ -191,7 +191,7 @@ namespace IdeaCode
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, FormColors.colorOrange);
-            OpenChildFrom(new ChildFormBlogs(this));
+            OpenChildFrom(new ChildFormSubmissions(this));
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

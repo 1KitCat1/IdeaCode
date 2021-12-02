@@ -78,6 +78,12 @@
     <Compile Include="Blocks\BlockBlog.Designer.cs">
       <DependentUpon>BlockBlog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blocks\BlockSubmission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Blocks\BlockSubmission.Designer.cs">
+      <DependentUpon>BlockSubmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blocks\BlockUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="ChildForms\ChildFormBlogs.Designer.cs">
       <DependentUpon>ChildFormBlogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ChildFormSubmissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildFormSubmissions.Designer.cs">
+      <DependentUpon>ChildFormSubmissions.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\ChildFormTasks.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,9 @@
     <EmbeddedResource Include="Blocks\BlockBlog.resx">
       <DependentUpon>BlockBlog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\BlockSubmission.resx">
+      <DependentUpon>BlockSubmission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Blocks\BlockUser.resx">
       <DependentUpon>BlockUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChildFormBlogs.resx">
       <DependentUpon>ChildFormBlogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChildFormSubmissions.resx">
+      <DependentUpon>ChildFormSubmissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChildFormTasks.resx">
       <DependentUpon>ChildFormTasks.cs</DependentUpon>
