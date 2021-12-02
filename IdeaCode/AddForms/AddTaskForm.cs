@@ -30,7 +30,7 @@ namespace IdeaCode.AddForms
                 {
                     currentMaxId = (int)dr[0];
                 }
-                catch(Exception ex)
+                catch
                 {
                     currentMaxId = 0;
                 }
@@ -85,7 +85,7 @@ namespace IdeaCode.AddForms
                 }
                 conn.Close();
             }
-            string tableName = "Tasks";
+            /*string tableName = "Tasks";*/
             string requestString = "INSERT INTO Tasks VALUES (@idTask, @title, @statement, @idUser, @compexity, @topic, @timeLimit, @spaceLimit)";
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {

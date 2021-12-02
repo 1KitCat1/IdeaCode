@@ -32,7 +32,7 @@ namespace IdeaCode.AddForms
                 {
                     currentMaxId = (int)dr[0];
                 }
-                catch(Exception ex)
+                catch
                 {
                     currentMaxId = 0;
                 }

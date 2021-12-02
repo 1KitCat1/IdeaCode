@@ -23,3 +23,6 @@ E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.AddForms.A
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.EditForms.EditFormUser.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.AddForms.AddTaskForm.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.EditForms.EditFormTask.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\BouncyCastle.Crypto.dll
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\itextsharp.dll
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\bin\Debug\itextsharp.xml

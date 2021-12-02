@@ -51,7 +51,7 @@ namespace IdeaCode.ChildForms
                             DataRow drL = dt.Rows[0];
                             userName = drL[0].ToString();
                         }
-                        catch (Exception ex)
+                        catch
                         {
                             conn.Close();
                             continue;
