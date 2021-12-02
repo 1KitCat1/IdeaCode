@@ -1,4 +1,6 @@
 ﻿using IdeaCode.Properties;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace IdeaCode.InfoForms
 {
@@ -34,7 +37,7 @@ namespace IdeaCode.InfoForms
             if(photo != null && photo.Length != 1)
             {
                 MemoryStream ms = new MemoryStream(photo);
-                pictureBoxUserPhoto.Image = Image.FromStream(ms);
+                pictureBoxUserPhoto.Image = System.Drawing.Image.FromStream(ms);
             }
             labelUserId.Text = idUser.ToString();
             labelRealName.Text = realName;
@@ -103,6 +106,43 @@ namespace IdeaCode.InfoForms
         {
             MainForm.OpenChildFrom(new EditForms.EditFormUser(idUser, userName, realName, e_mail,
             password, organisation, solved, rating, photo, MainForm));
+        }
+
+        private void iconButtonDownload_Click(object sender, EventArgs e)
+        {
+            string fileName = "UserInfo"+userName+(DateTime.Now.ToString("d")+ DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm")+ DateTime.Now.ToString("ss"));
+            
+            var document = new iTextSharp.text.Document();
+            using (var writer = PdfWriter.GetInstance(document, new FileStream(@"C:\Users\DenCHik\OneDrive\Pictures\"+fileName +".pdf", FileMode.Create)))
+            {
+                document.Open();
+
+                var font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12);
+
+                document.NewPage();
+                document.Add(new Paragraph("Id_user: " + idUser, font));
+                document.Add(new Paragraph("Username: " + userName, font));
+                document.Add(new Paragraph("E-mail: " + e_mail, font));
+                document.Add(new Paragraph("Organisation: " + organisation, font));
+                document.Add(new Paragraph("Solved: " + solved.ToString(), font));
+                document.Add(new Paragraph("Rating: " + rating.ToString(), font));
+                if(photo.Length < 2)
+                {
+                    document.Add(new Paragraph("NO PHOTO", font));
+                }
+                else
+                {
+                    var pic = iTextSharp.text.Image.GetInstance(photo);
+                    pic.SetAbsolutePosition(100, 400);
+                    writer.DirectContent.AddImage(pic);
+                }
+
+
+                document.Close();
+                writer.Close();
+                labelDownloadInfo.ForeColor = AppData.FormColors.colorGreen;
+                labelDownloadInfo.Text = "File succesfully created: " + @"C:\Users\DenCHik\OneDrive\Pictures\" + fileName + ".pdf";
+            }
         }
     }
 }

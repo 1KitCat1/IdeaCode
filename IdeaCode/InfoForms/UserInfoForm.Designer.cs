@@ -38,9 +38,9 @@ namespace IdeaCode.InfoForms
             this.labelUserOrganisation = new System.Windows.Forms.Label();
             this.panelConfirmDelete = new System.Windows.Forms.Panel();
             this.labelConfirmDelete = new System.Windows.Forms.Label();
+            this.labelErrorMessages = new System.Windows.Forms.Label();
             this.iconButtonConfirmDelete = new FontAwesome.Sharp.IconButton();
             this.iconButtonCancelDelete = new FontAwesome.Sharp.IconButton();
-            this.labelErrorMessages = new System.Windows.Forms.Label();
             this.iconButtonDeleteUser = new FontAwesome.Sharp.IconButton();
             this.iconButtonEditUser = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
@@ -52,6 +52,8 @@ namespace IdeaCode.InfoForms
             this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBoxUserPhoto = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButtonDownload = new FontAwesome.Sharp.IconButton();
+            this.labelDownloadInfo = new System.Windows.Forms.Label();
             this.panelConfirmDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
@@ -170,6 +172,17 @@ namespace IdeaCode.InfoForms
             this.labelConfirmDelete.Text = "Confirm:";
             this.labelConfirmDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelErrorMessages
+            // 
+            this.labelErrorMessages.AutoSize = true;
+            this.labelErrorMessages.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelErrorMessages.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelErrorMessages.Location = new System.Drawing.Point(88, 446);
+            this.labelErrorMessages.Name = "labelErrorMessages";
+            this.labelErrorMessages.Size = new System.Drawing.Size(0, 25);
+            this.labelErrorMessages.TabIndex = 36;
+            this.labelErrorMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // iconButtonConfirmDelete
             // 
             this.iconButtonConfirmDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -211,17 +224,6 @@ namespace IdeaCode.InfoForms
             this.iconButtonCancelDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonCancelDelete.UseVisualStyleBackColor = false;
             this.iconButtonCancelDelete.Click += new System.EventHandler(this.iconButtonCancelDelete_Click);
-            // 
-            // labelErrorMessages
-            // 
-            this.labelErrorMessages.AutoSize = true;
-            this.labelErrorMessages.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelErrorMessages.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelErrorMessages.Location = new System.Drawing.Point(88, 446);
-            this.labelErrorMessages.Name = "labelErrorMessages";
-            this.labelErrorMessages.Size = new System.Drawing.Size(0, 25);
-            this.labelErrorMessages.TabIndex = 36;
-            this.labelErrorMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconButtonDeleteUser
             // 
@@ -390,12 +392,44 @@ namespace IdeaCode.InfoForms
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // iconButtonDownload
+            // 
+            this.iconButtonDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonDownload.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonDownload.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonDownload.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.iconButtonDownload.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonDownload.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonDownload.IconSize = 30;
+            this.iconButtonDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonDownload.Location = new System.Drawing.Point(972, 481);
+            this.iconButtonDownload.Name = "iconButtonDownload";
+            this.iconButtonDownload.Size = new System.Drawing.Size(172, 45);
+            this.iconButtonDownload.TabIndex = 37;
+            this.iconButtonDownload.Text = "Download";
+            this.iconButtonDownload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonDownload.UseVisualStyleBackColor = false;
+            this.iconButtonDownload.Click += new System.EventHandler(this.iconButtonDownload_Click);
+            // 
+            // labelDownloadInfo
+            // 
+            this.labelDownloadInfo.AutoSize = true;
+            this.labelDownloadInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDownloadInfo.Location = new System.Drawing.Point(104, 421);
+            this.labelDownloadInfo.Name = "labelDownloadInfo";
+            this.labelDownloadInfo.Size = new System.Drawing.Size(0, 24);
+            this.labelDownloadInfo.TabIndex = 38;
+            // 
             // UserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.labelDownloadInfo);
+            this.Controls.Add(this.iconButtonDownload);
             this.Controls.Add(this.labelErrorMessages);
             this.Controls.Add(this.panelConfirmDelete);
             this.Controls.Add(this.iconButtonDeleteUser);
@@ -458,5 +492,7 @@ namespace IdeaCode.InfoForms
         private FontAwesome.Sharp.IconButton iconButtonConfirmDelete;
         private FontAwesome.Sharp.IconButton iconButtonCancelDelete;
         private System.Windows.Forms.Label labelErrorMessages;
+        private FontAwesome.Sharp.IconButton iconButtonDownload;
+        private System.Windows.Forms.Label labelDownloadInfo;
     }
 }
