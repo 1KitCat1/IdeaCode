@@ -289,6 +289,11 @@ namespace IdeaCode.ChildForms
             this.numericUpDownSolvedFrom.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.numericUpDownSolvedFrom.ForeColor = System.Drawing.Color.LemonChiffon;
             this.numericUpDownSolvedFrom.Location = new System.Drawing.Point(6, 218);
+            this.numericUpDownSolvedFrom.Maximum = new decimal(new int[] {
+            9000,
+            0,
+            0,
+            0});
             this.numericUpDownSolvedFrom.Name = "numericUpDownSolvedFrom";
             this.numericUpDownSolvedFrom.Size = new System.Drawing.Size(89, 29);
             this.numericUpDownSolvedFrom.TabIndex = 13;
@@ -364,6 +369,11 @@ namespace IdeaCode.ChildForms
             this.numericUpDownRatingFrom.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.numericUpDownRatingFrom.ForeColor = System.Drawing.Color.LemonChiffon;
             this.numericUpDownRatingFrom.Location = new System.Drawing.Point(6, 280);
+            this.numericUpDownRatingFrom.Maximum = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
             this.numericUpDownRatingFrom.Name = "numericUpDownRatingFrom";
             this.numericUpDownRatingFrom.Size = new System.Drawing.Size(89, 29);
             this.numericUpDownRatingFrom.TabIndex = 16;

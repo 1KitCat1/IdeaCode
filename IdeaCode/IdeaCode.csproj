@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForms\AddTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddTaskForm.Designer.cs">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddForms\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IdeaCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdeaCodeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InfoForms\TaskInfoBlog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +138,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddForms\AddTaskForm.resx">
+      <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddForms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +187,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="IdeaCodeDataSet.xsc">
+      <DependentUpon>IdeaCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IdeaCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IdeaCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IdeaCodeDataSet.xss">
+      <DependentUpon>IdeaCodeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
