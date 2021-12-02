@@ -54,7 +54,7 @@ namespace IdeaCode.ChildForms
                         catch (Exception ex)
                         {
                             conn.Close();
-                            return;
+                            continue;
                         }
                         conn.Close();
                     }

@@ -48,7 +48,7 @@ namespace IdeaCode
 
         private void BlockTask_MouseClick(object sender, MouseEventArgs e)
         {
-            Form taskInfo = new TaskInfoForm(taskTitle, taskStatement, taskAuthor, taskComplexity,
+            Form taskInfo = new TaskInfoForm(idTask, taskTitle, taskStatement, taskAuthor, taskComplexity,
             topic, timeLimit, spaceLimit, MainForm);
             /*taskInfo.Show();*/
             MainForm.OpenChildFrom(taskInfo);

@@ -38,9 +38,9 @@ namespace IdeaCode.InfoForms
             this.labelUserOrganisation = new System.Windows.Forms.Label();
             this.panelConfirmDelete = new System.Windows.Forms.Panel();
             this.labelConfirmDelete = new System.Windows.Forms.Label();
-            this.labelErrorMessages = new System.Windows.Forms.Label();
             this.iconButtonConfirmDelete = new FontAwesome.Sharp.IconButton();
             this.iconButtonCancelDelete = new FontAwesome.Sharp.IconButton();
+            this.labelErrorMessages = new System.Windows.Forms.Label();
             this.iconButtonDeleteUser = new FontAwesome.Sharp.IconButton();
             this.iconButtonEditUser = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
@@ -170,17 +170,6 @@ namespace IdeaCode.InfoForms
             this.labelConfirmDelete.Text = "Confirm:";
             this.labelConfirmDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelErrorMessages
-            // 
-            this.labelErrorMessages.AutoSize = true;
-            this.labelErrorMessages.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelErrorMessages.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelErrorMessages.Location = new System.Drawing.Point(88, 446);
-            this.labelErrorMessages.Name = "labelErrorMessages";
-            this.labelErrorMessages.Size = new System.Drawing.Size(0, 25);
-            this.labelErrorMessages.TabIndex = 36;
-            this.labelErrorMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // iconButtonConfirmDelete
             // 
             this.iconButtonConfirmDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -222,6 +211,17 @@ namespace IdeaCode.InfoForms
             this.iconButtonCancelDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonCancelDelete.UseVisualStyleBackColor = false;
             this.iconButtonCancelDelete.Click += new System.EventHandler(this.iconButtonCancelDelete_Click);
+            // 
+            // labelErrorMessages
+            // 
+            this.labelErrorMessages.AutoSize = true;
+            this.labelErrorMessages.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelErrorMessages.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.labelErrorMessages.Location = new System.Drawing.Point(88, 446);
+            this.labelErrorMessages.Name = "labelErrorMessages";
+            this.labelErrorMessages.Size = new System.Drawing.Size(0, 25);
+            this.labelErrorMessages.TabIndex = 36;
+            this.labelErrorMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconButtonDeleteUser
             // 

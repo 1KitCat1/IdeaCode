@@ -92,7 +92,7 @@ namespace IdeaCode.InfoForms
                 }
                 catch (Exception ex)
                 {
-                    labelErrorMessages.Text = "Error! Date has NOT been added to the database. " + ex.Message;
+                    labelErrorMessages.Text = "Error! Date has NOT been removed from the database. " + ex.Message;
                     labelErrorMessages.ForeColor = AppData.FormColors.colorError;
                 }
                 conn.Close();
