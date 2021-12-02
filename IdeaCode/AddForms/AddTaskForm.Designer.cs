@@ -37,7 +37,7 @@ namespace IdeaCode.AddForms
             this.numericUpDownMemory = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownTime = new System.Windows.Forms.NumericUpDown();
             this.textBoxTopic = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTaskUserAuthor = new System.Windows.Forms.ComboBox();
             this.iconButtonBack = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -50,6 +50,9 @@ namespace IdeaCode.AddForms
             this.numericUpDownComplexity = new System.Windows.Forms.NumericUpDown();
             this.iconButtonAccept = new FontAwesome.Sharp.IconButton();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.numericUpDownTaskId = new System.Windows.Forms.NumericUpDown();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.labelDatabaseMessages = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMemory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).BeginInit();
@@ -61,6 +64,8 @@ namespace IdeaCode.AddForms
             ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownComplexity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -160,18 +165,18 @@ namespace IdeaCode.AddForms
             this.textBoxTopic.TabIndex = 32;
             this.textBoxTopic.Text = "math";
             // 
-            // comboBox1
+            // comboBoxTaskUserAuthor
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.comboBox1.DataSource = this.usersBindingSource;
-            this.comboBox1.DisplayMember = "user_name";
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(924, 291);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 30);
-            this.comboBox1.TabIndex = 33;
+            this.comboBoxTaskUserAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.comboBoxTaskUserAuthor.DataSource = this.usersBindingSource;
+            this.comboBoxTaskUserAuthor.DisplayMember = "user_name";
+            this.comboBoxTaskUserAuthor.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.comboBoxTaskUserAuthor.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.comboBoxTaskUserAuthor.FormattingEnabled = true;
+            this.comboBoxTaskUserAuthor.Location = new System.Drawing.Point(924, 291);
+            this.comboBoxTaskUserAuthor.Name = "comboBoxTaskUserAuthor";
+            this.comboBoxTaskUserAuthor.Size = new System.Drawing.Size(179, 30);
+            this.comboBoxTaskUserAuthor.TabIndex = 33;
             // 
             // iconButtonBack
             // 
@@ -311,6 +316,7 @@ namespace IdeaCode.AddForms
             this.iconButtonAccept.Text = "Accept";
             this.iconButtonAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAccept.UseVisualStyleBackColor = false;
+            this.iconButtonAccept.Click += new System.EventHandler(this.iconButtonAccept_Click);
             // 
             // textBoxTitle
             // 
@@ -323,16 +329,62 @@ namespace IdeaCode.AddForms
             this.textBoxTitle.TabIndex = 52;
             this.textBoxTitle.Text = "Find max";
             // 
+            // numericUpDownTaskId
+            // 
+            this.numericUpDownTaskId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.numericUpDownTaskId.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownTaskId.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.numericUpDownTaskId.Location = new System.Drawing.Point(923, 22);
+            this.numericUpDownTaskId.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.numericUpDownTaskId.Name = "numericUpDownTaskId";
+            this.numericUpDownTaskId.Size = new System.Drawing.Size(96, 29);
+            this.numericUpDownTaskId.TabIndex = 54;
+            this.numericUpDownTaskId.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Fingerprint;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(244)))), ((int)(((byte)(109)))));
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 41;
+            this.iconPictureBox3.Location = new System.Drawing.Point(870, 17);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(53, 41);
+            this.iconPictureBox3.TabIndex = 53;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // labelDatabaseMessages
+            // 
+            this.labelDatabaseMessages.AutoSize = true;
+            this.labelDatabaseMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDatabaseMessages.Location = new System.Drawing.Point(56, 481);
+            this.labelDatabaseMessages.Name = "labelDatabaseMessages";
+            this.labelDatabaseMessages.Size = new System.Drawing.Size(0, 20);
+            this.labelDatabaseMessages.TabIndex = 55;
+            // 
             // AddTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.labelDatabaseMessages);
+            this.Controls.Add(this.numericUpDownTaskId);
+            this.Controls.Add(this.iconPictureBox3);
             this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.iconButtonAccept);
             this.Controls.Add(this.numericUpDownComplexity);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxTaskUserAuthor);
             this.Controls.Add(this.textBoxTopic);
             this.Controls.Add(this.numericUpDownTime);
             this.Controls.Add(this.numericUpDownMemory);
@@ -359,6 +411,8 @@ namespace IdeaCode.AddForms
             ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownComplexity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,12 +433,15 @@ namespace IdeaCode.AddForms
         private System.Windows.Forms.NumericUpDown numericUpDownMemory;
         private System.Windows.Forms.NumericUpDown numericUpDownTime;
         private System.Windows.Forms.TextBox textBoxTopic;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxTaskUserAuthor;
         private IdeaCodeDataSet ideaCodeDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private IdeaCodeDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.NumericUpDown numericUpDownComplexity;
         private FontAwesome.Sharp.IconButton iconButtonAccept;
         private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.NumericUpDown numericUpDownTaskId;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.Label labelDatabaseMessages;
     }
 }

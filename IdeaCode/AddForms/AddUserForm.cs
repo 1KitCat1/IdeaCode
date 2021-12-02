@@ -28,7 +28,14 @@ namespace IdeaCode.AddForms
                 var dt = new DataTable();
                 sda.Fill(dt);
                 DataRow dr = dt.Rows[0];
-                currentMaxId = (int)dr[0];
+                try
+                {
+                    currentMaxId = (int)dr[0];
+                }
+                catch(Exception ex)
+                {
+                    currentMaxId = 0;
+                }
 
                 conn.Close();
             }

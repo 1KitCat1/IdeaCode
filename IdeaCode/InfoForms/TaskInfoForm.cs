@@ -12,14 +12,13 @@ namespace IdeaCode.InfoForms
 {
     public partial class TaskInfoForm : Form
     {
-        Form BackForm;
         Form1 MainForm;
         public TaskInfoForm()
         {
             InitializeComponent();
         }
         public TaskInfoForm(string taskTitle, string taskStatement, string taskAuthor, int taskComplexity,
-            string topic, int timeLimit, int spaceLimit, Form1 MainForm, Form BackForm)
+            string topic, int timeLimit, int spaceLimit, Form1 MainForm)
         {
             InitializeComponent();
             labelTaskTitle.Text = taskTitle;
@@ -29,7 +28,6 @@ namespace IdeaCode.InfoForms
             richTextBox1.Text = taskStatement;
             labelTaskTopic.Text = topic;
             labelTaskComplexity.Text = taskComplexity.ToString();
-            this.BackForm = BackForm;
             this.MainForm = MainForm;
         }
 

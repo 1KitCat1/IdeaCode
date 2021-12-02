@@ -14,6 +14,7 @@ namespace IdeaCode
 {
     public partial class BlockTask : UserControl
     {
+        int idTask;
         string taskTitle;
         string taskStatement;
         string taskAuthor;
@@ -22,10 +23,9 @@ namespace IdeaCode
         int timeLimit;
         int spaceLimit;
         Form1 MainForm;
-        Form BackForm;
 
-        public BlockTask(string taskTitle, string taskStatement, string taskAuthor, int taskComplexity,
-            string topic, int timeLimit, int spaceLimit, Form1 MainForm, Form BackForm)
+        public BlockTask(int idTask, string taskTitle, string taskStatement, string taskAuthor, int taskComplexity,
+            string topic, int timeLimit, int spaceLimit, Form1 MainForm)
         {
             InitializeComponent();
             labelTaskTitle.Text = taskTitle;
@@ -33,6 +33,7 @@ namespace IdeaCode
             labelTaskTime.Text = timeLimit.ToString() + " ms";
             labelTaskTopic.Text = topic;
             labelTaskSpace.Text = spaceLimit.ToString() + " MB";
+            this.idTask = idTask;
             this.taskTitle = taskTitle;
             this.taskStatement = taskStatement;
             this.taskAuthor = taskAuthor;
@@ -41,7 +42,6 @@ namespace IdeaCode
             this.timeLimit = timeLimit;
             this.spaceLimit = spaceLimit;
             this.MainForm = MainForm;
-            this.BackForm = BackForm;
               
             
         }
@@ -49,7 +49,7 @@ namespace IdeaCode
         private void BlockTask_MouseClick(object sender, MouseEventArgs e)
         {
             Form taskInfo = new TaskInfoForm(taskTitle, taskStatement, taskAuthor, taskComplexity,
-            topic, timeLimit, spaceLimit, MainForm, BackForm);
+            topic, timeLimit, spaceLimit, MainForm);
             /*taskInfo.Show();*/
             MainForm.OpenChildFrom(taskInfo);
             

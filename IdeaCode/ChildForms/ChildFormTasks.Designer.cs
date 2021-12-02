@@ -30,10 +30,10 @@ namespace IdeaCode.ChildForms
         private void InitializeComponent()
         {
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.iconButtonFilter = new FontAwesome.Sharp.IconButton();
             this.iconButtonAddTask = new FontAwesome.Sharp.IconButton();
+            this.flowLayoutPanelTasks = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLeftSidebar.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
@@ -47,16 +47,6 @@ namespace IdeaCode.ChildForms
             this.panelLeftSidebar.Name = "panelLeftSidebar";
             this.panelLeftSidebar.Size = new System.Drawing.Size(220, 538);
             this.panelLeftSidebar.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(936, 538);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panelButtons
             // 
@@ -109,12 +99,22 @@ namespace IdeaCode.ChildForms
             this.iconButtonAddTask.UseVisualStyleBackColor = false;
             this.iconButtonAddTask.Click += new System.EventHandler(this.iconButtonAddTask_Click);
             // 
+            // flowLayoutPanelTasks
+            // 
+            this.flowLayoutPanelTasks.AutoScroll = true;
+            this.flowLayoutPanelTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.flowLayoutPanelTasks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelTasks.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelTasks.Name = "flowLayoutPanelTasks";
+            this.flowLayoutPanelTasks.Size = new System.Drawing.Size(936, 538);
+            this.flowLayoutPanelTasks.TabIndex = 0;
+            // 
             // ChildFormTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 538);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanelTasks);
             this.Controls.Add(this.panelLeftSidebar);
             this.Name = "ChildFormTasks";
             this.Text = "Tasks";
@@ -127,7 +127,7 @@ namespace IdeaCode.ChildForms
         #endregion
 
         private System.Windows.Forms.Panel panelLeftSidebar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTasks;
         private System.Windows.Forms.Panel panelButtons;
         private FontAwesome.Sharp.IconButton iconButtonFilter;
         private FontAwesome.Sharp.IconButton iconButtonAddTask;
