@@ -1,9 +1,12 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -102,6 +105,36 @@ namespace IdeaCode.InfoForms
         {
             MainForm.OpenChildFrom(new EditForms.EditFormTask(idTask, taskTitle, taskStatement, taskAuthor, taskComplexity,
             topic, timeLimit, spaceLimit, MainForm));
+        }
+
+        private void iconButtonDownload_Click(object sender, EventArgs e)
+        {
+            string fileName = "TaskInfo" + taskTitle + (DateTime.Now.ToString("d") + DateTime.Now.ToString("HH") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss"));
+
+            var document = new iTextSharp.text.Document();
+            using (var writer = PdfWriter.GetInstance(document, new FileStream(@"C:\Users\DenCHik\OneDrive\Pictures\" + fileName + ".pdf", FileMode.Create)))
+            {
+                document.Open();
+
+                var font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12);
+                var fontBold = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, 2);
+
+                document.NewPage();
+                document.Add(new Paragraph("Id task: " + idTask, fontBold));
+                document.Add(new Paragraph("Title: " + taskTitle, font));
+                document.Add(new Paragraph("Statement: " + taskStatement, font));
+                document.Add(new Paragraph("Author: " + taskAuthor, font));
+                document.Add(new Paragraph("Complexity: " + taskComplexity.ToString(), font));
+                document.Add(new Paragraph("Topic: " + topic, font));
+                document.Add(new Paragraph("Time limit: " + timeLimit.ToString() + " ms", font));
+                document.Add(new Paragraph("Space limit: " + spaceLimit.ToString() + " MB", font));
+
+
+                document.Close();
+                writer.Close();
+                labelDownloadInfo.ForeColor = AppData.FormColors.colorGreen;
+                labelDownloadInfo.Text = "File succesfully created: " + @"C:\Users\DenCHik\OneDrive\Pictures\" + fileName + ".pdf";
+            }
         }
     }
 }

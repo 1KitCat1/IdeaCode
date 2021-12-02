@@ -50,6 +50,8 @@ namespace IdeaCode.InfoForms
             this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
             this.iconTime = new FontAwesome.Sharp.IconPictureBox();
             this.iconMemory = new FontAwesome.Sharp.IconPictureBox();
+            this.iconButtonDownload = new FontAwesome.Sharp.IconButton();
+            this.labelDownloadInfo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panelConfirmDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -359,12 +361,44 @@ namespace IdeaCode.InfoForms
             this.iconMemory.TabIndex = 2;
             this.iconMemory.TabStop = false;
             // 
+            // iconButtonDownload
+            // 
+            this.iconButtonDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonDownload.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonDownload.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonDownload.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.iconButtonDownload.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonDownload.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonDownload.IconSize = 30;
+            this.iconButtonDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonDownload.Location = new System.Drawing.Point(972, 481);
+            this.iconButtonDownload.Name = "iconButtonDownload";
+            this.iconButtonDownload.Size = new System.Drawing.Size(172, 45);
+            this.iconButtonDownload.TabIndex = 40;
+            this.iconButtonDownload.Text = "Download";
+            this.iconButtonDownload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonDownload.UseVisualStyleBackColor = false;
+            this.iconButtonDownload.Click += new System.EventHandler(this.iconButtonDownload_Click);
+            // 
+            // labelDownloadInfo
+            // 
+            this.labelDownloadInfo.AutoSize = true;
+            this.labelDownloadInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDownloadInfo.Location = new System.Drawing.Point(56, 495);
+            this.labelDownloadInfo.Name = "labelDownloadInfo";
+            this.labelDownloadInfo.Size = new System.Drawing.Size(0, 20);
+            this.labelDownloadInfo.TabIndex = 41;
+            // 
             // TaskInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.labelDownloadInfo);
+            this.Controls.Add(this.iconButtonDownload);
             this.Controls.Add(this.iconButtonEditTask);
             this.Controls.Add(this.labelErrorMessages);
             this.Controls.Add(this.panelConfirmDelete);
@@ -420,5 +454,7 @@ namespace IdeaCode.InfoForms
         private FontAwesome.Sharp.IconButton iconButtonDeleteTask;
         private System.Windows.Forms.Label labelErrorMessages;
         private FontAwesome.Sharp.IconButton iconButtonEditTask;
+        private FontAwesome.Sharp.IconButton iconButtonDownload;
+        private System.Windows.Forms.Label labelDownloadInfo;
     }
 }

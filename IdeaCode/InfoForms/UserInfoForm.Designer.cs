@@ -416,10 +416,10 @@ namespace IdeaCode.InfoForms
             // labelDownloadInfo
             // 
             this.labelDownloadInfo.AutoSize = true;
-            this.labelDownloadInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDownloadInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDownloadInfo.Location = new System.Drawing.Point(104, 421);
             this.labelDownloadInfo.Name = "labelDownloadInfo";
-            this.labelDownloadInfo.Size = new System.Drawing.Size(0, 24);
+            this.labelDownloadInfo.Size = new System.Drawing.Size(0, 20);
             this.labelDownloadInfo.TabIndex = 38;
             // 
             // UserInfoForm

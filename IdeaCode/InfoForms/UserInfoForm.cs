@@ -118,17 +118,20 @@ namespace IdeaCode.InfoForms
                 document.Open();
 
                 var font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12);
+                var fontBold = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, 1);
 
                 document.NewPage();
-                document.Add(new Paragraph("Id_user: " + idUser, font));
+                document.Add(new Paragraph("Id user: " + idUser, fontBold));
                 document.Add(new Paragraph("Username: " + userName, font));
+                document.Add(new Paragraph("Real name: " + userName, font));
                 document.Add(new Paragraph("E-mail: " + e_mail, font));
                 document.Add(new Paragraph("Organisation: " + organisation, font));
                 document.Add(new Paragraph("Solved: " + solved.ToString(), font));
                 document.Add(new Paragraph("Rating: " + rating.ToString(), font));
-                if(photo.Length < 2)
+                document.Add(new Paragraph("Photo: ", font));
+                if (photo.Length < 2)
                 {
-                    document.Add(new Paragraph("NO PHOTO", font));
+                    document.Add(new Paragraph("    NO PHOTO", fontBold));
                 }
                 else
                 {
