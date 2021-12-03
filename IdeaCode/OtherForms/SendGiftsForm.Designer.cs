@@ -48,6 +48,9 @@ namespace IdeaCode.OtherForms
             this.labelGetGift3 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBoxGetGift3 = new System.Windows.Forms.PictureBox();
+            this.iconButtonNotify = new FontAwesome.Sharp.IconButton();
+            this.labelMessages = new System.Windows.Forms.Label();
+            this.iconButtonEditUser = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGift1)).BeginInit();
@@ -277,6 +280,57 @@ namespace IdeaCode.OtherForms
             this.pictureBoxGetGift3.TabIndex = 26;
             this.pictureBoxGetGift3.TabStop = false;
             // 
+            // iconButtonNotify
+            // 
+            this.iconButtonNotify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonNotify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonNotify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonNotify.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonNotify.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonNotify.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.iconButtonNotify.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonNotify.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonNotify.IconSize = 30;
+            this.iconButtonNotify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonNotify.Location = new System.Drawing.Point(705, 1106);
+            this.iconButtonNotify.Name = "iconButtonNotify";
+            this.iconButtonNotify.Size = new System.Drawing.Size(231, 45);
+            this.iconButtonNotify.TabIndex = 38;
+            this.iconButtonNotify.Text = "Notify winners";
+            this.iconButtonNotify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonNotify.UseVisualStyleBackColor = false;
+            this.iconButtonNotify.Click += new System.EventHandler(this.iconButtonNotify_Click);
+            // 
+            // labelMessages
+            // 
+            this.labelMessages.AutoSize = true;
+            this.labelMessages.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMessages.Location = new System.Drawing.Point(79, 705);
+            this.labelMessages.Name = "labelMessages";
+            this.labelMessages.Size = new System.Drawing.Size(0, 23);
+            this.labelMessages.TabIndex = 39;
+            // 
+            // iconButtonEditUser
+            // 
+            this.iconButtonEditUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonEditUser.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonEditUser.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonEditUser.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.iconButtonEditUser.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonEditUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonEditUser.IconSize = 30;
+            this.iconButtonEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonEditUser.Location = new System.Drawing.Point(756, 725);
+            this.iconButtonEditUser.Name = "iconButtonEditUser";
+            this.iconButtonEditUser.Size = new System.Drawing.Size(258, 45);
+            this.iconButtonEditUser.TabIndex = 40;
+            this.iconButtonEditUser.Text = "Notify winners";
+            this.iconButtonEditUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonEditUser.UseVisualStyleBackColor = false;
+            this.iconButtonEditUser.Click += new System.EventHandler(this.iconButtonEditUser_Click);
+            // 
             // SendGiftsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,6 +338,9 @@ namespace IdeaCode.OtherForms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.iconButtonEditUser);
+            this.Controls.Add(this.labelMessages);
+            this.Controls.Add(this.iconButtonNotify);
             this.Controls.Add(this.labelGetGift3);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.pictureBoxGetGift3);
@@ -341,5 +398,8 @@ namespace IdeaCode.OtherForms
         private System.Windows.Forms.Label labelGetGift3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.PictureBox pictureBoxGetGift3;
+        private FontAwesome.Sharp.IconButton iconButtonNotify;
+        private System.Windows.Forms.Label labelMessages;
+        private FontAwesome.Sharp.IconButton iconButtonEditUser;
     }
 }

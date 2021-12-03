@@ -17,6 +17,7 @@ namespace IdeaCode.OtherForms
         public SendGiftsForm()
         {
             InitializeComponent();
+            
             string userName1 = "";
             byte[] photo1 = new byte[1];
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
@@ -134,6 +135,18 @@ namespace IdeaCode.OtherForms
         private void labelGift1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButtonNotify_Click(object sender, EventArgs e)
+        {
+            labelMessages.Text = "Notification has been send to winners!";
+            labelMessages.ForeColor = AppData.FormColors.colorGreen;
+        }
+
+        private void iconButtonEditUser_Click(object sender, EventArgs e)
+        {
+            labelMessages.Text = "Notification has been send to winners!";
+            labelMessages.ForeColor = AppData.FormColors.colorGreen;
         }
     }
 }
