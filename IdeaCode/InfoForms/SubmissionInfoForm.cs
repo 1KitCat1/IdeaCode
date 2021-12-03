@@ -116,7 +116,7 @@ namespace IdeaCode.InfoForms
 
             labelSubmissionAuthor.Text = userName;
             labelSubmissionVerdict.Text = verdictName;
-            labelTaskSpace.Text = usedTime.ToString() + " MB";
+            labelTaskSpace.Text = usedSpace.ToString() + " MB";
             labelTaskTime.Text = usedTime.ToString() + " ms";
             labelTaskTitle.Text = taskName;
             richTextBoxCode.Text = code;
@@ -166,7 +166,9 @@ namespace IdeaCode.InfoForms
 
         private void iconButtonEditTask_Click(object sender, EventArgs e)
         {
-
+            MainForm.OpenChildFrom(new EditForms.EditFormSubmission(idSubmission,
+                    idTask, idUser, timeOfSubmission, idCompiler, code, idVerdict, usedTime,
+                    usedSpace, MainForm));
         }
     }
 }

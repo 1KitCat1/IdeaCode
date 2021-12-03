@@ -126,6 +126,12 @@
     <Compile Include="ChildForms\ChildFormUsers.Designer.cs">
       <DependentUpon>ChildFormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditForms\EditFormSubmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForms\EditFormSubmission.Designer.cs">
+      <DependentUpon>EditFormSubmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditForms\EditFormTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChildFormUsers.resx">
       <DependentUpon>ChildFormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForms\EditFormSubmission.resx">
+      <DependentUpon>EditFormSubmission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditForms\EditFormTask.resx">
       <DependentUpon>EditFormTask.cs</DependentUpon>

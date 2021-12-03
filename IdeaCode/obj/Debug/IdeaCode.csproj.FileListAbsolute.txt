@@ -31,3 +31,4 @@ E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.Blocks.Blo
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.ChildForms.ChildFormSubmissions.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.InfoForms.SubmissionInfoForm.resources
 E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.AddForms.AddSubmissionForm.resources
+E:\Coding\CSharp-DotNet\IdeaCode\IdeaCode\IdeaCode\obj\Debug\IdeaCode.EditForms.EditFormSubmission.resources

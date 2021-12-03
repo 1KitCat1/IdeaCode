@@ -9,64 +9,138 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IdeaCode.AddForms
+namespace IdeaCode.EditForms
 {
-    public partial class AddSubmissionForm : Form
+    public partial class EditFormSubmission : Form
     {
+        int idSubmission;
+        int idTask;
+        int idUser;
+        DateTime timeOfSubmission;
+        int idCompiler;
+        string code;
+        int idVerdict;
+        int usedTime;
+        int usedSpace;
         Form1 MainForm;
-        int currentMaxId = 0;
-
-        public AddSubmissionForm(Form1 MainForm)
+        public EditFormSubmission(int idSubmission, int idTask, int idUser, DateTime timeOfSubmission,
+            int idCompiler, string code, int idVerdict, int usedTime, int usedSpace, Form1 MainForm)
         {
             InitializeComponent();
+            this.idSubmission = idSubmission;
+            this.idTask = idTask;
+            this.idUser = idUser;
+            this.timeOfSubmission = timeOfSubmission;
+            this.idCompiler = idCompiler;
+            this.idVerdict = idVerdict;
+            this.code = code;
+            this.usedTime = usedTime;
+            this.usedSpace = usedSpace;
             this.MainForm = MainForm;
+            string taskName, userName, verdictName, compilerName;
+            // get taskName
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {
                 conn.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT max(id_submission) FROM Submissions", conn);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT title FROM Tasks WHERE id_task=" + idTask.ToString(), conn);
                 var dt = new DataTable();
                 sda.Fill(dt);
                 DataRow dr = dt.Rows[0];
                 try
                 {
-                    currentMaxId = (int)dr[0];
+                    taskName = dr[0].ToString();
                 }
                 catch
                 {
-                    currentMaxId = 0;
+                    taskName = "Find min";
                 }
-
                 conn.Close();
             }
-            numericUpDownTaskId.Value = currentMaxId + 1;
+            // get userName
+
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            {
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT user_name FROM Users WHERE id_user=" + idUser.ToString(), conn);
+                var dt = new DataTable();
+                sda.Fill(dt);
+                DataRow dr = dt.Rows[0];
+                try
+                {
+                    userName = dr[0].ToString();
+                }
+                catch
+                {
+                    userName = "_KitCat_";
+                }
+                conn.Close();
+            }
+
+            // get verdictName
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            {
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT text_verdict FROM Verdicts WHERE id_verdict=" + idVerdict.ToString(), conn);
+                var dt = new DataTable();
+                sda.Fill(dt);
+                DataRow dr = dt.Rows[0];
+                try
+                {
+                    verdictName = dr[0].ToString();
+                }
+                catch
+                {
+                    verdictName = "Find min";
+                }
+                conn.Close();
+            }
+            //get compilerName
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            {
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT name FROM Compilers WHERE id_compiler=" + idCompiler.ToString(), conn);
+                var dt = new DataTable();
+                sda.Fill(dt);
+                DataRow dr = dt.Rows[0];
+                try
+                {
+                    compilerName = dr[0].ToString();
+                }
+                catch
+                {
+                    compilerName = "JavaCore";
+                }
+                conn.Close();
+            }
+            comboBox1.Text = taskName;
+            comboBoxCompiler.Text = compilerName;
+            comboBoxTaskUserAuthor.Text = userName;
+            comboBoxVerdict.Text = verdictName;
+            numericUpDownMemory.Value = usedSpace;
+            numericUpDownTime.Value = usedTime;
+            numericUpDownTaskId.Value = idTask;
+            richTextBoxStatement.Text = code;
+            dateTimePicker1.Value = timeOfSubmission;
         }
 
-        private void AddSubmissionForm_Load(object sender, EventArgs e)
+        private void iconButtonBack_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ideaCodeDataSet1.Tasks' table. You can move, or remove it, as needed.
-            this.tasksTableAdapter.Fill(this.ideaCodeDataSet1.Tasks);
-            // TODO: This line of code loads data into the 'ideaCodeDataSet1.Verdicts' table. You can move, or remove it, as needed.
-            this.verdictsTableAdapter1.Fill(this.ideaCodeDataSet1.Verdicts);
-            // TODO: This line of code loads data into the 'ideaCodeDataSet.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.ideaCodeDataSet.Users);
-            // TODO: This line of code loads data into the 'ideaCodeDataSet.Compilers' table. You can move, or remove it, as needed.
-            this.compilersTableAdapter.Fill(this.ideaCodeDataSet.Compilers);
-            // TODO: This line of code loads data into the 'ideaCodeDataSet.Verdicts' table. You can move, or remove it, as needed.
-            this.verdictsTableAdapter.Fill(this.ideaCodeDataSet.Verdicts);
-
+            MainForm.OpenChildFrom(new InfoForms.SubmissionInfoForm(idSubmission,
+                    idTask, idUser, timeOfSubmission, idCompiler, code, idVerdict, usedTime,
+                    usedSpace, MainForm));
         }
 
         private void iconButtonAccept_Click(object sender, EventArgs e)
         {
-            int idSubmission = (int)numericUpDownTaskId.Value;
-            int idTask = 1;
-            int idUser = 1;
-            DateTime timeOfSubmission = dateTimePicker1.Value;
-            int idCompiler = 1;
-            string code = richTextBoxStatement.Text;
-            int idVerdict = 1;
-            int usedTime = (int)numericUpDownTime.Value;
-            int usedSpace = (int)numericUpDownMemory.Value;
+            idSubmission = (int)numericUpDownTaskId.Value;
+            idTask = 1;
+            idUser = 1;
+            timeOfSubmission = dateTimePicker1.Value;
+            idCompiler = 1;
+            code = richTextBoxStatement.Text;
+            idVerdict = 1;
+            usedTime = (int)numericUpDownTime.Value;
+            usedSpace = (int)numericUpDownMemory.Value;
             string taskName = comboBox1.Text;
             string verdictName = comboBoxVerdict.Text;
             string compilerName = comboBoxCompiler.Text;
@@ -76,7 +150,7 @@ namespace IdeaCode.AddForms
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {
                 conn.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT id_task FROM Tasks WHERE title='" + taskName +"'", conn);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id_task FROM Tasks WHERE title='" + taskName + "'", conn);
                 var dt = new DataTable();
                 sda.Fill(dt);
                 DataRow dr = dt.Rows[0];
@@ -151,8 +225,10 @@ namespace IdeaCode.AddForms
                 conn.Close();
             }
 
-            string requestString = "INSERT INTO Submissions VALUES (@idSubmission, @idTask, @idUser, @idCompiler, " +
-                "@code, @idVerdict, @usedTime, @usedSpace, @timeSub)";
+            string requestString = "UPDATE Submissions SET  id_task=@idTask," +
+                " id_user=@idUser, id_compiler=@idCompiler, " +
+                "code=@code, id_verdict=@idVerdict, used_time=@usedTime, used_space=@usedSpace," +
+                " time_submission=@timeSub WHERE id_submission=@idSubmission";
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {
 
@@ -169,9 +245,10 @@ namespace IdeaCode.AddForms
                 try
                 {
                     conn.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    labelDatabaseMessages.Text = "Data has been succesfully added to database. Rows affected: " + rowsAffected.ToString();
-                    labelDatabaseMessages.ForeColor = AppData.FormColors.colorGreen;
+                    command.ExecuteNonQuery();
+                    MainForm.OpenChildFrom(new InfoForms.SubmissionInfoForm(idSubmission,
+                    idTask, idUser, timeOfSubmission, idCompiler, code, idVerdict, usedTime,
+                    usedSpace, MainForm));
 
                 }
                 catch (Exception ex)
@@ -181,11 +258,6 @@ namespace IdeaCode.AddForms
                 }
                 conn.Close();
             }
-        }
-
-        private void iconButtonBack_Click(object sender, EventArgs e)
-        {
-            MainForm.OpenChildFrom(new ChildForms.ChildFormSubmissions(MainForm));
         }
     }
 }
