@@ -44,6 +44,7 @@ namespace IdeaCode.EditForms
             numericUpDownUserRating.Value = rating;
             numericUpDownUserSolved.Value = solved;
             textBoxUserName.Text = userName;
+            textBoxPassword.Text = password;
 
             this.idUser = idUser;
             this.userName = userName;

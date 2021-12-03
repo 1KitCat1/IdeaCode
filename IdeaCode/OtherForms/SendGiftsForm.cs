@@ -67,7 +67,7 @@ namespace IdeaCode.OtherForms
             }
             if (photo1.Length > 2)
             {
-                MemoryStream ms = new MemoryStream(photo1);
+                MemoryStream ms = new MemoryStream(photo2);
                 pictureBoxGetGift2.Image = System.Drawing.Image.FromStream(ms);
             }
             labelGetGift2.Text = userName2;

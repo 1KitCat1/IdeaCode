@@ -29,18 +29,18 @@ namespace IdeaCode.OtherForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartCountProblemsByComplexity = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.chartUsersByRating = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -50,6 +50,7 @@ namespace IdeaCode.OtherForms
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.chartByCompilers = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartCountProblemsByComplexity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUsersByRating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBySolved)).BeginInit();
@@ -60,21 +61,21 @@ namespace IdeaCode.OtherForms
             // 
             this.chartCountProblemsByComplexity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.chartCountProblemsByComplexity.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(140)))), ((int)(((byte)(235)))));
-            chartArea1.Name = "ChartArea1";
-            this.chartCountProblemsByComplexity.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.chartCountProblemsByComplexity.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chartCountProblemsByComplexity.ChartAreas.Add(chartArea5);
+            legend5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            this.chartCountProblemsByComplexity.Legends.Add(legend5);
             this.chartCountProblemsByComplexity.Location = new System.Drawing.Point(113, 80);
             this.chartCountProblemsByComplexity.Name = "chartCountProblemsByComplexity";
             this.chartCountProblemsByComplexity.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.LabelForeColor = System.Drawing.Color.Transparent;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartCountProblemsByComplexity.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.LabelForeColor = System.Drawing.Color.Transparent;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartCountProblemsByComplexity.Series.Add(series5);
             this.chartCountProblemsByComplexity.Size = new System.Drawing.Size(600, 318);
             this.chartCountProblemsByComplexity.TabIndex = 0;
             this.chartCountProblemsByComplexity.Text = "chart1";
@@ -95,22 +96,22 @@ namespace IdeaCode.OtherForms
             // 
             this.chartUsersByRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.chartUsersByRating.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(140)))), ((int)(((byte)(235)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartUsersByRating.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chartUsersByRating.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chartUsersByRating.ChartAreas.Add(chartArea6);
+            legend6.Enabled = false;
+            legend6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            this.chartUsersByRating.Legends.Add(legend6);
             this.chartUsersByRating.Location = new System.Drawing.Point(113, 477);
             this.chartUsersByRating.Name = "chartUsersByRating";
             this.chartUsersByRating.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series2.LabelForeColor = System.Drawing.Color.Transparent;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartUsersByRating.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series6.LabelForeColor = System.Drawing.Color.Transparent;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartUsersByRating.Series.Add(series6);
             this.chartUsersByRating.Size = new System.Drawing.Size(600, 318);
             this.chartUsersByRating.TabIndex = 3;
             this.chartUsersByRating.Text = "chart1";
@@ -141,22 +142,22 @@ namespace IdeaCode.OtherForms
             // 
             this.chartBySolved.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.chartBySolved.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(140)))), ((int)(((byte)(235)))));
-            chartArea3.Name = "ChartArea1";
-            this.chartBySolved.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            this.chartBySolved.Legends.Add(legend3);
-            this.chartBySolved.Location = new System.Drawing.Point(113, 878);
+            chartArea7.Name = "ChartArea1";
+            this.chartBySolved.ChartAreas.Add(chartArea7);
+            legend7.Enabled = false;
+            legend7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend7.IsTextAutoFit = false;
+            legend7.Name = "Legend1";
+            this.chartBySolved.Legends.Add(legend7);
+            this.chartBySolved.Location = new System.Drawing.Point(113, 904);
             this.chartBySolved.Name = "chartBySolved";
             this.chartBySolved.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "ChartArea1";
-            series3.LabelForeColor = System.Drawing.Color.Transparent;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartBySolved.Series.Add(series3);
-            this.chartBySolved.Size = new System.Drawing.Size(846, 318);
+            series7.ChartArea = "ChartArea1";
+            series7.LabelForeColor = System.Drawing.Color.Transparent;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chartBySolved.Series.Add(series7);
+            this.chartBySolved.Size = new System.Drawing.Size(846, 292);
             this.chartBySolved.TabIndex = 5;
             this.chartBySolved.Text = "chart1";
             // 
@@ -185,24 +186,32 @@ namespace IdeaCode.OtherForms
             // 
             this.chartByCompilers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.chartByCompilers.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(140)))), ((int)(((byte)(235)))));
-            chartArea4.Name = "ChartArea1";
-            this.chartByCompilers.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            this.chartByCompilers.Legends.Add(legend4);
+            chartArea8.Name = "ChartArea1";
+            this.chartByCompilers.ChartAreas.Add(chartArea8);
+            legend8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend8.IsTextAutoFit = false;
+            legend8.Name = "Legend1";
+            this.chartByCompilers.Legends.Add(legend8);
             this.chartByCompilers.Location = new System.Drawing.Point(113, 1327);
             this.chartByCompilers.Name = "chartByCompilers";
             this.chartByCompilers.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.LabelForeColor = System.Drawing.Color.Transparent;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartByCompilers.Series.Add(series4);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.LabelForeColor = System.Drawing.Color.Transparent;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chartByCompilers.Series.Add(series8);
             this.chartByCompilers.Size = new System.Drawing.Size(600, 318);
             this.chartByCompilers.TabIndex = 10;
             this.chartByCompilers.Text = "chart1";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.panel1.Location = new System.Drawing.Point(142, 917);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(57, 241);
+            this.panel1.TabIndex = 11;
             // 
             // StatisticForm
             // 
@@ -211,6 +220,7 @@ namespace IdeaCode.OtherForms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.chartByCompilers);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -242,5 +252,6 @@ namespace IdeaCode.OtherForms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartByCompilers;
+        private System.Windows.Forms.Panel panel1;
     }
 }
