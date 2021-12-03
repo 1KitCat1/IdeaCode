@@ -110,5 +110,10 @@ namespace IdeaCode.ChildForms
 
             }
         }
+
+        private void iconButtonAddSubmission_Click(object sender, EventArgs e)
+        {
+            MainForm.OpenChildFrom(new AddForms.AddSubmissionForm(MainForm));
+        }
     }
 }

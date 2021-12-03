@@ -31,9 +31,9 @@ namespace IdeaCode.ChildForms
         {
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
             this.panelButtons = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelSubmissions = new System.Windows.Forms.FlowLayoutPanel();
             this.iconButtonFilter = new FontAwesome.Sharp.IconButton();
             this.iconButtonAddSubmission = new FontAwesome.Sharp.IconButton();
-            this.flowLayoutPanelSubmissions = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLeftSidebar.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,16 @@ namespace IdeaCode.ChildForms
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(220, 145);
             this.panelButtons.TabIndex = 0;
+            // 
+            // flowLayoutPanelSubmissions
+            // 
+            this.flowLayoutPanelSubmissions.AutoScroll = true;
+            this.flowLayoutPanelSubmissions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.flowLayoutPanelSubmissions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelSubmissions.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelSubmissions.Name = "flowLayoutPanelSubmissions";
+            this.flowLayoutPanelSubmissions.Size = new System.Drawing.Size(936, 538);
+            this.flowLayoutPanelSubmissions.TabIndex = 2;
             // 
             // iconButtonFilter
             // 
@@ -97,16 +107,7 @@ namespace IdeaCode.ChildForms
             this.iconButtonAddSubmission.Text = "Add";
             this.iconButtonAddSubmission.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAddSubmission.UseVisualStyleBackColor = false;
-            // 
-            // flowLayoutPanelSubmissions
-            // 
-            this.flowLayoutPanelSubmissions.AutoScroll = true;
-            this.flowLayoutPanelSubmissions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.flowLayoutPanelSubmissions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelSubmissions.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelSubmissions.Name = "flowLayoutPanelSubmissions";
-            this.flowLayoutPanelSubmissions.Size = new System.Drawing.Size(936, 538);
-            this.flowLayoutPanelSubmissions.TabIndex = 2;
+            this.iconButtonAddSubmission.Click += new System.EventHandler(this.iconButtonAddSubmission_Click);
             // 
             // ChildFormSubmissions
             // 
@@ -117,7 +118,7 @@ namespace IdeaCode.ChildForms
             this.Controls.Add(this.flowLayoutPanelSubmissions);
             this.Controls.Add(this.panelLeftSidebar);
             this.Name = "ChildFormSubmissions";
-            this.Text = "ChildFormSubmissions";
+            this.Text = "Submissions";
             this.panelLeftSidebar.ResumeLayout(false);
             this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);

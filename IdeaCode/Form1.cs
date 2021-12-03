@@ -190,7 +190,7 @@ namespace IdeaCode
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, FormColors.colorOrange);
+            ActivateButton(sender, FormColors.colorBlue);
             OpenChildFrom(new ChildFormSubmissions(this));
         }
 

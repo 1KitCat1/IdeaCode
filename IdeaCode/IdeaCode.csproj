@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForms\AddSubmissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddSubmissionForm.Designer.cs">
+      <DependentUpon>AddSubmissionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddForms\AddTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IdeaCodeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InfoForms\SubmissionInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForms\SubmissionInfoForm.Designer.cs">
+      <DependentUpon>SubmissionInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoForms\TaskInfoBlog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddForms\AddSubmissionForm.resx">
+      <DependentUpon>AddSubmissionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddForms\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForms\SubmissionInfoForm.resx">
+      <DependentUpon>SubmissionInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoForms\TaskInfoBlog.resx">
       <DependentUpon>TaskInfoBlog.cs</DependentUpon>

@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IdeaCode.Blocks
+namespace IdeaCode.InfoForms
 {
-    public partial class BlockSubmission : UserControl
+    public partial class SubmissionInfoForm : Form
     {
         int idSubmission;
         int idTask;
@@ -23,8 +23,7 @@ namespace IdeaCode.Blocks
         int usedTime;
         int usedSpace;
         Form1 MainForm;
-
-        public BlockSubmission(int idSubmission, int idTask, int idUser, DateTime timeOfSubmission,
+        public SubmissionInfoForm(int idSubmission, int idTask, int idUser, DateTime timeOfSubmission,
             int idCompiler, string code, int idVerdict, int usedTime, int usedSpace, Form1 MainForm)
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace IdeaCode.Blocks
             this.usedSpace = usedSpace;
             this.MainForm = MainForm;
 
-            string taskName, userName, verdictName;
+            string taskName, userName, verdictName, compilerName;
             // get taskName
             using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
             {
@@ -96,22 +95,78 @@ namespace IdeaCode.Blocks
                 }
                 conn.Close();
             }
-            labelSubmissionTaskName.Text = taskName;
-            labelSubmissionUser.Text = userName;
+            //get compilerName
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            {
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT name FROM Compilers WHERE id_compiler=" + idCompiler.ToString(), conn);
+                var dt = new DataTable();
+                sda.Fill(dt);
+                DataRow dr = dt.Rows[0];
+                try
+                {
+                    compilerName = dr[0].ToString();
+                }
+                catch
+                {
+                    compilerName = "JavaCore";
+                }
+                conn.Close();
+            }
+
+            labelSubmissionAuthor.Text = userName;
             labelSubmissionVerdict.Text = verdictName;
-
+            labelTaskSpace.Text = usedTime.ToString() + " MB";
+            labelTaskTime.Text = usedTime.ToString() + " ms";
+            labelTaskTitle.Text = taskName;
+            richTextBoxCode.Text = code;
+            labelCompiler.Text = compilerName;
+            labelDateTime.Text = timeOfSubmission.ToString("G");
         }
 
-        private void BlockSubmission_Load(object sender, EventArgs e)
+        private void iconButtonDeleteTask_Click(object sender, EventArgs e)
         {
-
+            panelConfirmDelete.Visible = true;
         }
 
-        private void BlockSubmission_Click(object sender, EventArgs e)
+        private void iconButtonBack_Click(object sender, EventArgs e)
         {
-            MainForm.OpenChildFrom(new InfoForms.SubmissionInfoForm(idSubmission,
-                    idTask, idUser, timeOfSubmission, idCompiler, code, idVerdict, usedTime,
-                    usedSpace, MainForm));
+            MainForm.OpenChildFrom(new ChildForms.ChildFormSubmissions(MainForm));
+        }
+
+        private void iconButtonCancelDelete_Click(object sender, EventArgs e)
+        {
+            panelConfirmDelete.Visible = false;
+        }
+
+        private void iconButtonConfirmDelete_Click(object sender, EventArgs e)
+        {
+            string requestString = "DELETE FROM Submissions WHERE id_submission=@delIdSubmission; ";
+
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            {
+
+                SqlCommand command = new SqlCommand(requestString, conn);
+                command.Parameters.AddWithValue("@delIdSubmission", idSubmission);
+                try
+                {
+                    conn.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    MainForm.OpenChildFrom(new ChildForms.ChildFormSubmissions(MainForm));
+
+                }
+                catch (Exception ex)
+                {
+                    labelErrorMessages.Text = "Error! Date has NOT been removed from the database. " + ex.Message;
+                    labelErrorMessages.ForeColor = AppData.FormColors.colorError;
+                }
+                conn.Close();
+            }
+        }
+
+        private void iconButtonEditTask_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

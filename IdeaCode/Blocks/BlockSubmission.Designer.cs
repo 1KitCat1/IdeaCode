@@ -120,6 +120,8 @@ namespace IdeaCode.Blocks
             this.Controls.Add(this.labelSubmissionTaskName);
             this.Name = "BlockSubmission";
             this.Size = new System.Drawing.Size(606, 128);
+            this.Load += new System.EventHandler(this.BlockSubmission_Load);
+            this.Click += new System.EventHandler(this.BlockSubmission_Click);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
