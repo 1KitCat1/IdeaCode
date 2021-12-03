@@ -233,7 +233,7 @@ namespace IdeaCode
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton5.Font = new System.Drawing.Font("Bookman Old Style", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.iconButton5.ForeColor = System.Drawing.Color.OldLace;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Music;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Gifts;
             this.iconButton5.IconColor = System.Drawing.Color.OldLace;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 32;
@@ -242,10 +242,11 @@ namespace IdeaCode
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(200, 60);
             this.iconButton5.TabIndex = 5;
-            this.iconButton5.Text = "iconButton5";
+            this.iconButton5.Text = "Send gifts";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // iconButton4
             // 

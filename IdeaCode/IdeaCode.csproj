@@ -184,6 +184,12 @@
     <Compile Include="InfoForms\UserInfoForm.Designer.cs">
       <DependentUpon>UserInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherForms\SendGiftsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\SendGiftsForm.Designer.cs">
+      <DependentUpon>SendGiftsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherForms\StatisticForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoForms\UserInfoForm.resx">
       <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\SendGiftsForm.resx">
+      <DependentUpon>SendGiftsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherForms\StatisticForm.resx">
       <DependentUpon>StatisticForm.cs</DependentUpon>

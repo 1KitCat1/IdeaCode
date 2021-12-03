@@ -199,5 +199,11 @@ namespace IdeaCode
             ActivateButton(sender, FormColors.colorPurple);
             OpenChildFrom(new OtherForms.StatisticForm());
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, FormColors.colorOrange);
+            OpenChildFrom(new OtherForms.SendGiftsForm());
+        }
     }
 }
