@@ -59,6 +59,11 @@ namespace IdeaCode.AddForms
             this.compilersTableAdapter = new IdeaCode.IdeaCodeDataSetTableAdapters.CompilersTableAdapter();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new IdeaCode.IdeaCodeDataSetTableAdapters.UsersTableAdapter();
+            this.ideaCodeDataSet1 = new IdeaCode.IdeaCodeDataSet1();
+            this.verdictsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.verdictsTableAdapter1 = new IdeaCode.IdeaCodeDataSet1TableAdapters.VerdictsTableAdapter();
+            this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tasksTableAdapter = new IdeaCode.IdeaCodeDataSet1TableAdapters.TasksTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMemory)).BeginInit();
@@ -74,6 +79,9 @@ namespace IdeaCode.AddForms
             ((System.ComponentModel.ISupportInitialize)(this.verdictsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compilersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verdictsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDatabaseMessages
@@ -123,6 +131,7 @@ namespace IdeaCode.AddForms
             this.iconButtonAccept.Text = "Accept";
             this.iconButtonAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAccept.UseVisualStyleBackColor = false;
+            this.iconButtonAccept.Click += new System.EventHandler(this.iconButtonAccept_Click);
             // 
             // comboBoxTaskUserAuthor
             // 
@@ -213,7 +222,7 @@ namespace IdeaCode.AddForms
             this.richTextBoxStatement.Name = "richTextBoxStatement";
             this.richTextBoxStatement.Size = new System.Drawing.Size(750, 369);
             this.richTextBoxStatement.TabIndex = 2;
-            this.richTextBoxStatement.Text = "Given n and array of length n. Find the maximal value";
+            this.richTextBoxStatement.Text = "";
             // 
             // iconAuthor
             // 
@@ -311,6 +320,8 @@ namespace IdeaCode.AddForms
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.comboBox1.DataSource = this.tasksBindingSource;
+            this.comboBox1.DisplayMember = "title";
             this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.Color.LemonChiffon;
             this.comboBox1.FormattingEnabled = true;
@@ -336,8 +347,8 @@ namespace IdeaCode.AddForms
             // comboBoxVerdict
             // 
             this.comboBoxVerdict.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.comboBoxVerdict.DataSource = this.verdictsBindingSource;
-            this.comboBoxVerdict.DisplayMember = "is_ok";
+            this.comboBoxVerdict.DataSource = this.verdictsBindingSource2;
+            this.comboBoxVerdict.DisplayMember = "text_verdict";
             this.comboBoxVerdict.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.comboBoxVerdict.ForeColor = System.Drawing.Color.LemonChiffon;
             this.comboBoxVerdict.FormattingEnabled = true;
@@ -403,6 +414,29 @@ namespace IdeaCode.AddForms
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // ideaCodeDataSet1
+            // 
+            this.ideaCodeDataSet1.DataSetName = "IdeaCodeDataSet1";
+            this.ideaCodeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // verdictsBindingSource2
+            // 
+            this.verdictsBindingSource2.DataMember = "Verdicts";
+            this.verdictsBindingSource2.DataSource = this.ideaCodeDataSet1;
+            // 
+            // verdictsTableAdapter1
+            // 
+            this.verdictsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tasksBindingSource
+            // 
+            this.tasksBindingSource.DataMember = "Tasks";
+            this.tasksBindingSource.DataSource = this.ideaCodeDataSet1;
+            // 
+            // tasksTableAdapter
+            // 
+            this.tasksTableAdapter.ClearBeforeFill = true;
+            // 
             // AddSubmissionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -447,6 +481,9 @@ namespace IdeaCode.AddForms
             ((System.ComponentModel.ISupportInitialize)(this.verdictsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.compilersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verdictsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,5 +520,10 @@ namespace IdeaCode.AddForms
         private IdeaCodeDataSetTableAdapters.CompilersTableAdapter compilersTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private IdeaCodeDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private IdeaCodeDataSet1 ideaCodeDataSet1;
+        private System.Windows.Forms.BindingSource verdictsBindingSource2;
+        private IdeaCodeDataSet1TableAdapters.VerdictsTableAdapter verdictsTableAdapter1;
+        private System.Windows.Forms.BindingSource tasksBindingSource;
+        private IdeaCodeDataSet1TableAdapters.TasksTableAdapter tasksTableAdapter;
     }
 }

@@ -149,6 +149,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IdeaCodeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IdeaCodeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdeaCodeDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InfoForms\SubmissionInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +263,17 @@
     </None>
     <None Include="IdeaCodeDataSet.xss">
       <DependentUpon>IdeaCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IdeaCodeDataSet1.xsc">
+      <DependentUpon>IdeaCodeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IdeaCodeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IdeaCodeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IdeaCodeDataSet1.xss">
+      <DependentUpon>IdeaCodeDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
