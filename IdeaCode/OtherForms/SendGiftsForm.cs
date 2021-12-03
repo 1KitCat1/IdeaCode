@@ -145,7 +145,7 @@ namespace IdeaCode.OtherForms
 
         private void iconButtonEditUser_Click(object sender, EventArgs e)
         {
-            labelMessages.Text = "Notification has been send to winners!";
+            labelMessages.Text = "Notification has been send to the winners!";
             labelMessages.ForeColor = AppData.FormColors.colorGreen;
         }
     }

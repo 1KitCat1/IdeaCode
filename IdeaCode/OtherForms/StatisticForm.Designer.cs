@@ -38,16 +38,22 @@ namespace IdeaCode.OtherForms
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartCountProblemsByComplexity = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.chartUsersByRating = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.chartBySolved = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chartByCompilers = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chartCountProblemsByComplexity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUsersByRating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBySolved)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartByCompilers)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCountProblemsByComplexity
@@ -84,17 +90,6 @@ namespace IdeaCode.OtherForms
             this.label1.Size = new System.Drawing.Size(250, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Problems Complexity";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label2.Location = new System.Drawing.Point(30, 1219);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Problems Complexity";
             // 
             // chartUsersByRating
             // 
@@ -165,6 +160,50 @@ namespace IdeaCode.OtherForms
             this.chartBySolved.TabIndex = 5;
             this.chartBySolved.Text = "chart1";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.label5.Location = new System.Drawing.Point(147, 1269);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(304, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Submissions by compilers";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.label6.Location = new System.Drawing.Point(93, 1657);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "label6";
+            // 
+            // chartByCompilers
+            // 
+            this.chartByCompilers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.chartByCompilers.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(140)))), ((int)(((byte)(235)))));
+            chartArea4.Name = "ChartArea1";
+            this.chartByCompilers.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            this.chartByCompilers.Legends.Add(legend4);
+            this.chartByCompilers.Location = new System.Drawing.Point(113, 1327);
+            this.chartByCompilers.Name = "chartByCompilers";
+            this.chartByCompilers.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.LabelForeColor = System.Drawing.Color.Transparent;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartByCompilers.Series.Add(series4);
+            this.chartByCompilers.Size = new System.Drawing.Size(600, 318);
+            this.chartByCompilers.TabIndex = 10;
+            this.chartByCompilers.Text = "chart1";
+            // 
             // StatisticForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,11 +211,13 @@ namespace IdeaCode.OtherForms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.Controls.Add(this.chartByCompilers);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chartBySolved);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chartUsersByRating);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartCountProblemsByComplexity);
             this.Name = "StatisticForm";
@@ -184,6 +225,7 @@ namespace IdeaCode.OtherForms
             ((System.ComponentModel.ISupportInitialize)(this.chartCountProblemsByComplexity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUsersByRating)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBySolved)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartByCompilers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,10 +235,12 @@ namespace IdeaCode.OtherForms
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCountProblemsByComplexity;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartUsersByRating;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBySolved;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartByCompilers;
     }
 }

@@ -119,6 +119,37 @@ namespace IdeaCode.OtherForms
             {
                 chartBySolved.Series["Series1"].Points.AddXY((end - 499).ToString() + "-" + (end.ToString()), countUsersBySolved[(int)(end / 500) - 1]);
             }
+
+            // submissions by compilers
+            List<int> CompilersCount = new List<int>();
+            List<string> CompilersNames = new List<string>();
+
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            {
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT name, count(id_submission) FROM Compilers, Submissions " +
+                    "WHERE Compilers.id_compiler=Submissions.id_compiler GROUP BY name", conn);
+                var dt = new DataTable();
+                sda.Fill(dt);
+
+                try
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        CompilersNames.Add(dr[0].ToString());
+                        CompilersCount.Add((int)dr[1]);
+                    }
+                }
+                catch
+                {
+                    //error
+                }
+                conn.Close();
+                for(int i = 0; i < CompilersCount.Count; i++)
+                {
+                    chartByCompilers.Series["Series1"].Points.AddXY(CompilersNames[i], CompilersCount[i]);
+                }
+            }
         }
 
         private void chartCountProblemsByComplexity_Click(object sender, EventArgs e)
