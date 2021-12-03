@@ -321,6 +321,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogoNoText.ico" />
+    <None Include="Resources\pants-removebg-preview.png" />
+    <None Include="Resources\pants.jpg" />
+    <None Include="Resources\Ipad-removebg-preview.png" />
+    <None Include="Resources\MacBook-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
