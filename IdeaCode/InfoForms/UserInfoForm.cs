@@ -123,7 +123,7 @@ namespace IdeaCode.InfoForms
                 document.NewPage();
                 document.Add(new Paragraph("Id user: " + idUser, fontBold));
                 document.Add(new Paragraph("Username: " + userName, font));
-                document.Add(new Paragraph("Real name: " + userName, font));
+                document.Add(new Paragraph("Real name: " + realName, font));
                 document.Add(new Paragraph("E-mail: " + e_mail, font));
                 document.Add(new Paragraph("Organisation: " + organisation, font));
                 document.Add(new Paragraph("Solved: " + solved.ToString(), font));

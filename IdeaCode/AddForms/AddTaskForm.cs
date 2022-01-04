@@ -87,7 +87,7 @@ namespace IdeaCode.AddForms
             }
             /*string tableName = "Tasks";*/
             string requestString = "INSERT INTO Tasks VALUES (@idTask, @title, @statement, @idUser, @compexity, @topic, @timeLimit, @spaceLimit)";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
 
                 SqlCommand command = new SqlCommand(requestString, conn);

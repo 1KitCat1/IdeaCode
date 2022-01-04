@@ -87,11 +87,8 @@ namespace IdeaCode.EditForms
 
             string requestString = "UPDATE Tasks SET title=@title, statement=@statement, id_user=@idUser, complexity=@comp, " +
                 "topic=@topic, time_limit=@tl, space_limit=@sl WHERE id_task=@idTask";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
-
-
-
                 SqlCommand command = new SqlCommand(requestString, conn);
                 command.Parameters.AddWithValue("@idTask", idTask);
                 command.Parameters.AddWithValue("@title", taskTitle);
@@ -105,8 +102,8 @@ namespace IdeaCode.EditForms
                 {
                     conn.Open();
                     command.ExecuteNonQuery();
-                    MainForm.OpenChildFrom(new InfoForms.TaskInfoForm(idTask, taskTitle, taskStatement, taskAuthor, taskComplexity,
-            topic, timeLimit, spaceLimit, MainForm));
+                    MainForm.OpenChildFrom(new InfoForms.TaskInfoForm(idTask, taskTitle, taskStatement, taskAuthor,
+                        taskComplexity, topic, timeLimit, spaceLimit, MainForm));
 
                 }
                 catch (Exception ex)

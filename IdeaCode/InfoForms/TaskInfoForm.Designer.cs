@@ -39,10 +39,10 @@ namespace IdeaCode.InfoForms
             this.labelTaskComplexity = new System.Windows.Forms.Label();
             this.panelConfirmDelete = new System.Windows.Forms.Panel();
             this.labelConfirmDelete = new System.Windows.Forms.Label();
-            this.labelErrorMessages = new System.Windows.Forms.Label();
-            this.iconButtonEditTask = new FontAwesome.Sharp.IconButton();
             this.iconButtonConfirmDelete = new FontAwesome.Sharp.IconButton();
             this.iconButtonCancelDelete = new FontAwesome.Sharp.IconButton();
+            this.labelErrorMessages = new System.Windows.Forms.Label();
+            this.iconButtonEditTask = new FontAwesome.Sharp.IconButton();
             this.iconButtonDeleteTask = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -182,36 +182,6 @@ namespace IdeaCode.InfoForms
             this.labelConfirmDelete.Text = "Confirm:";
             this.labelConfirmDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelErrorMessages
-            // 
-            this.labelErrorMessages.AutoSize = true;
-            this.labelErrorMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelErrorMessages.Location = new System.Drawing.Point(239, 496);
-            this.labelErrorMessages.Name = "labelErrorMessages";
-            this.labelErrorMessages.Size = new System.Drawing.Size(0, 20);
-            this.labelErrorMessages.TabIndex = 38;
-            // 
-            // iconButtonEditTask
-            // 
-            this.iconButtonEditTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButtonEditTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
-            this.iconButtonEditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonEditTask.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButtonEditTask.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.iconButtonEditTask.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconButtonEditTask.IconColor = System.Drawing.Color.LemonChiffon;
-            this.iconButtonEditTask.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonEditTask.IconSize = 30;
-            this.iconButtonEditTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonEditTask.Location = new System.Drawing.Point(486, 13);
-            this.iconButtonEditTask.Name = "iconButtonEditTask";
-            this.iconButtonEditTask.Size = new System.Drawing.Size(124, 45);
-            this.iconButtonEditTask.TabIndex = 39;
-            this.iconButtonEditTask.Text = "Edit";
-            this.iconButtonEditTask.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonEditTask.UseVisualStyleBackColor = false;
-            this.iconButtonEditTask.Click += new System.EventHandler(this.iconButtonEditTask_Click);
-            // 
             // iconButtonConfirmDelete
             // 
             this.iconButtonConfirmDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -253,6 +223,36 @@ namespace IdeaCode.InfoForms
             this.iconButtonCancelDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonCancelDelete.UseVisualStyleBackColor = false;
             this.iconButtonCancelDelete.Click += new System.EventHandler(this.iconButtonCancelDelete_Click);
+            // 
+            // labelErrorMessages
+            // 
+            this.labelErrorMessages.AutoSize = true;
+            this.labelErrorMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelErrorMessages.Location = new System.Drawing.Point(239, 496);
+            this.labelErrorMessages.Name = "labelErrorMessages";
+            this.labelErrorMessages.Size = new System.Drawing.Size(0, 20);
+            this.labelErrorMessages.TabIndex = 38;
+            // 
+            // iconButtonEditTask
+            // 
+            this.iconButtonEditTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonEditTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonEditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonEditTask.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonEditTask.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonEditTask.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.iconButtonEditTask.IconColor = System.Drawing.Color.LemonChiffon;
+            this.iconButtonEditTask.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonEditTask.IconSize = 30;
+            this.iconButtonEditTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonEditTask.Location = new System.Drawing.Point(486, 13);
+            this.iconButtonEditTask.Name = "iconButtonEditTask";
+            this.iconButtonEditTask.Size = new System.Drawing.Size(124, 45);
+            this.iconButtonEditTask.TabIndex = 39;
+            this.iconButtonEditTask.Text = "Edit";
+            this.iconButtonEditTask.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonEditTask.UseVisualStyleBackColor = false;
+            this.iconButtonEditTask.Click += new System.EventHandler(this.iconButtonEditTask_Click);
             // 
             // iconButtonDeleteTask
             // 
@@ -417,7 +417,7 @@ namespace IdeaCode.InfoForms
             this.Controls.Add(this.labelTaskTitle);
             this.Controls.Add(this.groupBox1);
             this.Name = "TaskInfoForm";
-            this.Text = "TaskInfoForm";
+            this.Text = "Task Info";
             this.groupBox1.ResumeLayout(false);
             this.panelConfirmDelete.ResumeLayout(false);
             this.panelConfirmDelete.PerformLayout();

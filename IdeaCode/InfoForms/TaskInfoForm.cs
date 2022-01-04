@@ -80,7 +80,7 @@ namespace IdeaCode.InfoForms
         {
             string requestString = "DELETE FROM Tasks WHERE id_task=@delIdTask; ";
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
 
                 SqlCommand command = new SqlCommand(requestString, conn);
@@ -94,7 +94,8 @@ namespace IdeaCode.InfoForms
                 }
                 catch (Exception ex)
                 {
-                    labelErrorMessages.Text = "Error! Date has NOT been removed from the database. " + ex.Message;
+                    labelErrorMessages.Text = "Error! Date has NOT been removed from the database. "
+                        + ex.Message;
                     labelErrorMessages.ForeColor = AppData.FormColors.colorError;
                 }
                 conn.Close();

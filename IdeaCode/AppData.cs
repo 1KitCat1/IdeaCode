@@ -9,6 +9,8 @@ namespace IdeaCode
 {
     public static class AppData
     {
+        public static string connectionString = 
+            @"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True";
         public struct FormColors
         {
             public static Color colorYellow = Color.FromArgb(251, 244, 109);

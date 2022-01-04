@@ -38,14 +38,14 @@ namespace IdeaCode.AddForms
             this.numericUpDownTime = new System.Windows.Forms.NumericUpDown();
             this.textBoxTopic = new System.Windows.Forms.TextBox();
             this.comboBoxTaskUserAuthor = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ideaCodeDataSet = new IdeaCode.IdeaCodeDataSet();
             this.iconButtonBack = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconAuthor = new FontAwesome.Sharp.IconPictureBox();
             this.iconTime = new FontAwesome.Sharp.IconPictureBox();
             this.iconMemory = new FontAwesome.Sharp.IconPictureBox();
-            this.ideaCodeDataSet = new IdeaCode.IdeaCodeDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new IdeaCode.IdeaCodeDataSetTableAdapters.UsersTableAdapter();
             this.numericUpDownComplexity = new System.Windows.Forms.NumericUpDown();
             this.iconButtonAccept = new FontAwesome.Sharp.IconButton();
@@ -56,13 +56,13 @@ namespace IdeaCode.AddForms
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMemory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownComplexity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -178,6 +178,16 @@ namespace IdeaCode.AddForms
             this.comboBoxTaskUserAuthor.Size = new System.Drawing.Size(179, 30);
             this.comboBoxTaskUserAuthor.TabIndex = 33;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.ideaCodeDataSet;
+            // 
+            // ideaCodeDataSet
+            // 
+            this.ideaCodeDataSet.DataSetName = "IdeaCodeDataSet";
+            this.ideaCodeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // iconButtonBack
             // 
             this.iconButtonBack.FlatAppearance.BorderSize = 0;
@@ -263,16 +273,6 @@ namespace IdeaCode.AddForms
             this.iconMemory.Size = new System.Drawing.Size(53, 41);
             this.iconMemory.TabIndex = 19;
             this.iconMemory.TabStop = false;
-            // 
-            // ideaCodeDataSet
-            // 
-            this.ideaCodeDataSet.DataSetName = "IdeaCodeDataSet";
-            this.ideaCodeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.ideaCodeDataSet;
             // 
             // usersTableAdapter
             // 
@@ -398,18 +398,18 @@ namespace IdeaCode.AddForms
             this.Controls.Add(this.iconTime);
             this.Controls.Add(this.iconMemory);
             this.Name = "AddTaskForm";
-            this.Text = "AddTaskForm";
+            this.Text = "Add Task";
             this.Load += new System.EventHandler(this.AddTaskForm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMemory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconAuthor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownComplexity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();

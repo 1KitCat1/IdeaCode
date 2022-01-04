@@ -156,5 +156,44 @@ namespace IdeaCode.OtherForms
         {
 
         }
+
+        private void iconButtonApply_Click(object sender, EventArgs e)
+        {
+            // submissions by compilers
+            List<int> CompilersCount = new List<int>();
+            List<string> CompilersNames = new List<string>();
+            DateTime from = dateTimePickerFrom.Value;
+            DateTime to = dateTimePickerTo.Value;
+            string fromDataString = from.ToString("yyyy") + '-' + from.ToString("dd") + '-' + from.ToString("MM");
+            string toDataString = to.ToString("yyyy") + '-' + to.ToString("dd") + '-' + to.ToString("MM");
+
+
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
+            {
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT name, count(id_submission) FROM Compilers, Submissions WHERE Compilers.id_compiler = Submissions.id_compiler AND time_submission >= '"+fromDataString+"' AND time_submission <= '"+toDataString+"' GROUP BY name", conn);
+                var dt = new DataTable();
+                
+
+                try
+                {
+                    sda.Fill(dt);
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        CompilersNames.Add(dr[0].ToString());
+                        CompilersCount.Add((int)dr[1]);
+                    }
+                }
+                catch
+                {
+                    //error
+                }
+                conn.Close();
+                for (int i = 0; i < CompilersCount.Count; i++)
+                {
+                    chartByCompilers.Series["Series1"].Points.AddXY(CompilersNames[i], CompilersCount[i]);
+                }
+            }
+        }
     }
 }
