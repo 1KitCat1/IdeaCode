@@ -21,7 +21,7 @@ namespace IdeaCode.AddForms
         {
             InitializeComponent();
             this.MainForm = MainForm;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT max(id_user) FROM Users", conn);
@@ -87,7 +87,7 @@ namespace IdeaCode.AddForms
 
             string tableName = "Users";
             string requestString = "INSERT INTO Users VALUES (@idUser, @userName, @realName, @email, @pas, @org, @solved, @rating, @photo)";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 
                 SqlCommand command = new SqlCommand(requestString, conn);

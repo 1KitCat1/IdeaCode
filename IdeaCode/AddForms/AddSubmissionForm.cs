@@ -20,7 +20,7 @@ namespace IdeaCode.AddForms
         {
             InitializeComponent();
             this.MainForm = MainForm;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT max(id_submission) FROM Submissions", conn);
@@ -73,7 +73,7 @@ namespace IdeaCode.AddForms
             string userName = comboBoxTaskUserAuthor.Text;
 
             // get taskName
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT id_task FROM Tasks WHERE title='" + taskName +"'", conn);
@@ -93,7 +93,7 @@ namespace IdeaCode.AddForms
             }
             // get userName
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT id_user FROM Users WHERE user_name='" + userName + "'", conn);
@@ -113,7 +113,7 @@ namespace IdeaCode.AddForms
             }
 
             // get verdictName
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT id_verdict FROM Verdicts WHERE text_verdict='" + verdictName + "'", conn);
@@ -132,7 +132,7 @@ namespace IdeaCode.AddForms
                 conn.Close();
             }
             //get compilerName
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT id_compiler FROM Compilers WHERE name='" + compilerName + "'", conn);
@@ -153,7 +153,7 @@ namespace IdeaCode.AddForms
 
             string requestString = "INSERT INTO Submissions VALUES (@idSubmission, @idTask, @idUser, @idCompiler, " +
                 "@code, @idVerdict, @usedTime, @usedSpace, @timeSub)";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
 
                 SqlCommand command = new SqlCommand(requestString, conn);

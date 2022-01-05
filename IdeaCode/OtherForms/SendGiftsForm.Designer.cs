@@ -51,6 +51,9 @@ namespace IdeaCode.OtherForms
             this.iconButtonNotify = new FontAwesome.Sharp.IconButton();
             this.labelMessages = new System.Windows.Forms.Label();
             this.iconButtonEditUser = new FontAwesome.Sharp.IconButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.iconButtonAccept = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGift1)).BeginInit();
@@ -67,7 +70,7 @@ namespace IdeaCode.OtherForms
             this.labelGift1.AutoSize = true;
             this.labelGift1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGift1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
-            this.labelGift1.Location = new System.Drawing.Point(48, 197);
+            this.labelGift1.Location = new System.Drawing.Point(48, 254);
             this.labelGift1.Name = "labelGift1";
             this.labelGift1.Size = new System.Drawing.Size(182, 23);
             this.labelGift1.TabIndex = 1;
@@ -79,7 +82,7 @@ namespace IdeaCode.OtherForms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
-            this.label1.Location = new System.Drawing.Point(48, 406);
+            this.label1.Location = new System.Drawing.Point(48, 463);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 23);
             this.label1.TabIndex = 3;
@@ -90,7 +93,7 @@ namespace IdeaCode.OtherForms
             this.labelGift3.AutoSize = true;
             this.labelGift3.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGift3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
-            this.labelGift3.Location = new System.Drawing.Point(48, 619);
+            this.labelGift3.Location = new System.Drawing.Point(48, 676);
             this.labelGift3.Name = "labelGift3";
             this.labelGift3.Size = new System.Drawing.Size(71, 23);
             this.labelGift3.TabIndex = 5;
@@ -109,7 +112,7 @@ namespace IdeaCode.OtherForms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IdeaCode.Properties.Resources.pants_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(59, 450);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 507);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +122,7 @@ namespace IdeaCode.OtherForms
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IdeaCode.Properties.Resources.Ipad_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 237);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 294);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +132,7 @@ namespace IdeaCode.OtherForms
             // pictureBoxGift1
             // 
             this.pictureBoxGift1.Image = global::IdeaCode.Properties.Resources.MacBook_removebg_preview;
-            this.pictureBoxGift1.Location = new System.Drawing.Point(59, 28);
+            this.pictureBoxGift1.Location = new System.Drawing.Point(59, 85);
             this.pictureBoxGift1.Name = "pictureBoxGift1";
             this.pictureBoxGift1.Size = new System.Drawing.Size(150, 150);
             this.pictureBoxGift1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +144,7 @@ namespace IdeaCode.OtherForms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label2.Location = new System.Drawing.Point(228, 111);
+            this.label2.Location = new System.Drawing.Point(228, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(302, 23);
             this.label2.TabIndex = 7;
@@ -152,7 +155,7 @@ namespace IdeaCode.OtherForms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label4.Location = new System.Drawing.Point(225, 320);
+            this.label4.Location = new System.Drawing.Point(225, 377);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(431, 23);
             this.label4.TabIndex = 8;
@@ -163,7 +166,7 @@ namespace IdeaCode.OtherForms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label5.Location = new System.Drawing.Point(254, 529);
+            this.label5.Location = new System.Drawing.Point(254, 586);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(293, 23);
             this.label5.TabIndex = 9;
@@ -173,7 +176,7 @@ namespace IdeaCode.OtherForms
             // 
             this.pictureBoxGetGift1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
             this.pictureBoxGetGift1.Image = global::IdeaCode.Properties.Resources.LogoBoldBig;
-            this.pictureBoxGetGift1.Location = new System.Drawing.Point(785, 23);
+            this.pictureBoxGetGift1.Location = new System.Drawing.Point(785, 80);
             this.pictureBoxGetGift1.Name = "pictureBoxGetGift1";
             this.pictureBoxGetGift1.Size = new System.Drawing.Size(150, 150);
             this.pictureBoxGetGift1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,7 +188,7 @@ namespace IdeaCode.OtherForms
             this.labelUserUsername.AutoSize = true;
             this.labelUserUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelUserUsername.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelUserUsername.Location = new System.Drawing.Point(842, 186);
+            this.labelUserUsername.Location = new System.Drawing.Point(842, 243);
             this.labelUserUsername.Name = "labelUserUsername";
             this.labelUserUsername.Size = new System.Drawing.Size(107, 25);
             this.labelUserUsername.TabIndex = 22;
@@ -200,7 +203,7 @@ namespace IdeaCode.OtherForms
             this.iconAuthor.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
             this.iconAuthor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconAuthor.IconSize = 41;
-            this.iconAuthor.Location = new System.Drawing.Point(785, 179);
+            this.iconAuthor.Location = new System.Drawing.Point(785, 236);
             this.iconAuthor.Name = "iconAuthor";
             this.iconAuthor.Size = new System.Drawing.Size(53, 41);
             this.iconAuthor.TabIndex = 21;
@@ -211,7 +214,7 @@ namespace IdeaCode.OtherForms
             this.labelGetGift2.AutoSize = true;
             this.labelGetGift2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGetGift2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelGetGift2.Location = new System.Drawing.Point(842, 389);
+            this.labelGetGift2.Location = new System.Drawing.Point(842, 446);
             this.labelGetGift2.Name = "labelGetGift2";
             this.labelGetGift2.Size = new System.Drawing.Size(107, 25);
             this.labelGetGift2.TabIndex = 25;
@@ -226,7 +229,7 @@ namespace IdeaCode.OtherForms
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 41;
-            this.iconPictureBox1.Location = new System.Drawing.Point(785, 382);
+            this.iconPictureBox1.Location = new System.Drawing.Point(785, 439);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(53, 41);
             this.iconPictureBox1.TabIndex = 24;
@@ -236,7 +239,7 @@ namespace IdeaCode.OtherForms
             // 
             this.pictureBoxGetGift2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
             this.pictureBoxGetGift2.Image = global::IdeaCode.Properties.Resources.LogoBoldBig;
-            this.pictureBoxGetGift2.Location = new System.Drawing.Point(785, 226);
+            this.pictureBoxGetGift2.Location = new System.Drawing.Point(785, 283);
             this.pictureBoxGetGift2.Name = "pictureBoxGetGift2";
             this.pictureBoxGetGift2.Size = new System.Drawing.Size(150, 150);
             this.pictureBoxGetGift2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -248,7 +251,7 @@ namespace IdeaCode.OtherForms
             this.labelGetGift3.AutoSize = true;
             this.labelGetGift3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelGetGift3.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.labelGetGift3.Location = new System.Drawing.Point(842, 613);
+            this.labelGetGift3.Location = new System.Drawing.Point(842, 670);
             this.labelGetGift3.Name = "labelGetGift3";
             this.labelGetGift3.Size = new System.Drawing.Size(107, 25);
             this.labelGetGift3.TabIndex = 28;
@@ -263,7 +266,7 @@ namespace IdeaCode.OtherForms
             this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 41;
-            this.iconPictureBox2.Location = new System.Drawing.Point(785, 606);
+            this.iconPictureBox2.Location = new System.Drawing.Point(785, 663);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(53, 41);
             this.iconPictureBox2.TabIndex = 27;
@@ -273,7 +276,7 @@ namespace IdeaCode.OtherForms
             // 
             this.pictureBoxGetGift3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
             this.pictureBoxGetGift3.Image = global::IdeaCode.Properties.Resources.LogoBoldBig;
-            this.pictureBoxGetGift3.Location = new System.Drawing.Point(785, 450);
+            this.pictureBoxGetGift3.Location = new System.Drawing.Point(785, 507);
             this.pictureBoxGetGift3.Name = "pictureBoxGetGift3";
             this.pictureBoxGetGift3.Size = new System.Drawing.Size(150, 150);
             this.pictureBoxGetGift3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +295,7 @@ namespace IdeaCode.OtherForms
             this.iconButtonNotify.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonNotify.IconSize = 30;
             this.iconButtonNotify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonNotify.Location = new System.Drawing.Point(684, 1498);
+            this.iconButtonNotify.Location = new System.Drawing.Point(697, 1890);
             this.iconButtonNotify.Name = "iconButtonNotify";
             this.iconButtonNotify.Size = new System.Drawing.Size(231, 45);
             this.iconButtonNotify.TabIndex = 38;
@@ -305,7 +308,7 @@ namespace IdeaCode.OtherForms
             // 
             this.labelMessages.AutoSize = true;
             this.labelMessages.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMessages.Location = new System.Drawing.Point(79, 705);
+            this.labelMessages.Location = new System.Drawing.Point(79, 735);
             this.labelMessages.Name = "labelMessages";
             this.labelMessages.Size = new System.Drawing.Size(0, 23);
             this.labelMessages.TabIndex = 39;
@@ -322,7 +325,7 @@ namespace IdeaCode.OtherForms
             this.iconButtonEditUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonEditUser.IconSize = 30;
             this.iconButtonEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonEditUser.Location = new System.Drawing.Point(735, 725);
+            this.iconButtonEditUser.Location = new System.Drawing.Point(748, 750);
             this.iconButtonEditUser.Name = "iconButtonEditUser";
             this.iconButtonEditUser.Size = new System.Drawing.Size(258, 45);
             this.iconButtonEditUser.TabIndex = 40;
@@ -331,13 +334,54 @@ namespace IdeaCode.OtherForms
             this.iconButtonEditUser.UseVisualStyleBackColor = false;
             this.iconButtonEditUser.Click += new System.EventHandler(this.iconButtonEditUser_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.label6.Location = new System.Drawing.Point(55, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(522, 23);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Choose from users with latest NOT earlier then";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(605, 33);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 42;
+            // 
+            // iconButtonAccept
+            // 
+            this.iconButtonAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(24)))), ((int)(((byte)(95)))));
+            this.iconButtonAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAccept.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonAccept.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
+            this.iconButtonAccept.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.iconButtonAccept.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(254)))), ((int)(((byte)(152)))));
+            this.iconButtonAccept.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAccept.IconSize = 30;
+            this.iconButtonAccept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonAccept.Location = new System.Drawing.Point(837, 20);
+            this.iconButtonAccept.Name = "iconButtonAccept";
+            this.iconButtonAccept.Size = new System.Drawing.Size(133, 35);
+            this.iconButtonAccept.TabIndex = 51;
+            this.iconButtonAccept.Text = "Apply";
+            this.iconButtonAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonAccept.UseVisualStyleBackColor = false;
+            this.iconButtonAccept.Click += new System.EventHandler(this.iconButtonAccept_Click);
+            // 
             // SendGiftsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1156, 538);
+            this.ClientSize = new System.Drawing.Size(1190, 708);
+            this.Controls.Add(this.iconButtonAccept);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.iconButtonEditUser);
             this.Controls.Add(this.labelMessages);
             this.Controls.Add(this.iconButtonNotify);
@@ -401,5 +445,8 @@ namespace IdeaCode.OtherForms
         private FontAwesome.Sharp.IconButton iconButtonNotify;
         private System.Windows.Forms.Label labelMessages;
         private FontAwesome.Sharp.IconButton iconButtonEditUser;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private FontAwesome.Sharp.IconButton iconButtonAccept;
     }
 }

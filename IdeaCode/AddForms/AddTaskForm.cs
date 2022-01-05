@@ -19,7 +19,7 @@ namespace IdeaCode.AddForms
         {
             InitializeComponent();
             this.MainForm = MainForm;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT max(id_task) FROM Tasks", conn);
@@ -42,9 +42,7 @@ namespace IdeaCode.AddForms
 
         private void AddTaskForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ideaCodeDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.ideaCodeDataSet.Users);
-
         }
 
         private void iconButtonBack_Click(object sender, EventArgs e)
@@ -64,7 +62,7 @@ namespace IdeaCode.AddForms
             int spaceLimit = (int)numericUpDownMemory.Value;
 
             int idUser = 0;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT id_user FROM Users WHERE user_name='"+username+"'", conn);

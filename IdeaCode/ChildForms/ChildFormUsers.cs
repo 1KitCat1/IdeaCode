@@ -23,7 +23,7 @@ namespace IdeaCode.ChildForms
             InitializeComponent();
             DataTable usersFromDB;
             this.MainForm = MainForm;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Users", conn);
@@ -158,7 +158,7 @@ namespace IdeaCode.ChildForms
                     query += " DESC";
             }
             
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter(query, conn);

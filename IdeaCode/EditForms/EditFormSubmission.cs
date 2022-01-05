@@ -39,7 +39,7 @@ namespace IdeaCode.EditForms
             this.MainForm = MainForm;
             string taskName, userName, verdictName, compilerName;
             // get taskName
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT title FROM Tasks WHERE id_task=" + idTask.ToString(), conn);

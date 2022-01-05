@@ -19,7 +19,7 @@ namespace IdeaCode.ChildForms
             InitializeComponent();
             DataTable submissionsFromDB;
             this.MainForm = MainForm;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Submissions", conn);
@@ -43,7 +43,7 @@ namespace IdeaCode.ChildForms
                     DateTime timeOfSubmission = Convert.ToDateTime(dr[8]);
                     string taskName, userName, verdictName;
                     // get taskName
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                    using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                     {
                         conn.Open();
                         SqlDataAdapter sda = new SqlDataAdapter("SELECT title FROM Tasks WHERE id_task=" + idTask.ToString(), conn);
@@ -62,7 +62,7 @@ namespace IdeaCode.ChildForms
                     }
                     // get userName
 
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                    using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                     {
                         conn.Open();
                         SqlDataAdapter sda = new SqlDataAdapter("SELECT user_name FROM Users WHERE id_user=" + idUser.ToString(), conn);
@@ -81,7 +81,7 @@ namespace IdeaCode.ChildForms
                     }
 
                     // get verdictName
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                    using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                     {
                         conn.Open();
                         SqlDataAdapter sda = new SqlDataAdapter("SELECT text_verdict FROM Verdicts WHERE id_verdict=" + idVerdict.ToString(), conn);

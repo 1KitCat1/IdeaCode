@@ -68,7 +68,7 @@ namespace IdeaCode.EditForms
 
             string requestString = "UPDATE Users SET user_name=@userName, real_name=@realName, e_mail=@email, password=@pas, " +
                 "organisation=@org, solved=@solved, rating=@rating, photo=@photo WHERE id_user=@idUser";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 userName = textBoxUserName.Text;
                 realName = textBoxUserRealName.Text;

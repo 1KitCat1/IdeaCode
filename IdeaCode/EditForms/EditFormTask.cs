@@ -63,7 +63,7 @@ namespace IdeaCode.EditForms
             spaceLimit = (int)numericUpDownMemory.Value;
             int idUser = 1;
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT id_user FROM Users WHERE user_name='" + taskAuthor + "'", conn);

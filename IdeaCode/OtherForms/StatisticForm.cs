@@ -22,7 +22,7 @@ namespace IdeaCode.OtherForms
             {
                 int end = start + 499;
                 int count = 0;
-                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                 {
                     conn.Open();
                     string request = "SELECT count(id_task) FROM Tasks WHERE complexity>=" + start.ToString()+
@@ -59,7 +59,7 @@ namespace IdeaCode.OtherForms
             {
                 int end = start + 399;
                 int count = 0;
-                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                 {
                     conn.Open();
                     string request = "SELECT count(id_user) FROM Users WHERE rating>=" + start.ToString() +
@@ -124,7 +124,7 @@ namespace IdeaCode.OtherForms
             List<int> CompilersCount = new List<int>();
             List<string> CompilersNames = new List<string>();
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT name, count(id_submission) FROM Compilers, Submissions " +

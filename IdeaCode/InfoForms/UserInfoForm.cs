@@ -45,6 +45,7 @@ namespace IdeaCode.InfoForms
             labelUserRating.Text = rating.ToString();
             labelUserSolved.Text = solved.ToString();
             labelUserUsername.Text = userName;
+            labelUserOrganisation.Text = organisation;
 
             panelConfirmDelete.Visible = false;
             this.idUser = idUser;
@@ -81,7 +82,7 @@ namespace IdeaCode.InfoForms
         {
             string requestString = "DELETE FROM Users WHERE id_user=@delIdUser; ";
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
 
                 SqlCommand command = new SqlCommand(requestString, conn);

@@ -19,7 +19,7 @@ namespace IdeaCode.ChildForms
             InitializeComponent();
             DataTable tasksFromDB;
             this.MainForm = MainForm;
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tasks", conn);
@@ -40,7 +40,7 @@ namespace IdeaCode.ChildForms
                     int timeLimit = (int)dr[6];
                     int spaceLimit = (int)dr[7];
                     string userName = "_KitCat_";
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                    using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                     {
                         conn.Open();
                         SqlDataAdapter sda = new SqlDataAdapter("SELECT user_name FROM Users WHERE id_user=" + taskAuthor, conn);
