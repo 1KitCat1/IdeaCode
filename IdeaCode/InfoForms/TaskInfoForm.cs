@@ -122,6 +122,7 @@ namespace IdeaCode.InfoForms
 
 
                 document.NewPage();
+                document.Add(new Paragraph("Created: " + DateTime.Now.ToString("g"), fontBold));
                 document.Add(new Paragraph("Id task: " + idTask, fontBold));
                 document.Add(new Paragraph("Title: " + taskTitle, font));
                 document.Add(new Paragraph("Statement: " + taskStatement, font));

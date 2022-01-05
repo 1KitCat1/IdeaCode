@@ -29,6 +29,7 @@ namespace IdeaCode.EditForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxCompiler = new System.Windows.Forms.ComboBox();
             this.comboBoxVerdict = new System.Windows.Forms.ComboBox();
@@ -50,6 +51,10 @@ namespace IdeaCode.EditForms
             this.iconButtonBack = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.ideaCodeDataSet1 = new IdeaCode.IdeaCodeDataSet1();
+            this.ideaCodeDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tasksTableAdapter = new IdeaCode.IdeaCodeDataSet1TableAdapters.TasksTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMemory)).BeginInit();
@@ -60,6 +65,9 @@ namespace IdeaCode.EditForms
             ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -94,6 +102,8 @@ namespace IdeaCode.EditForms
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(20)))), ((int)(((byte)(90)))));
+            this.comboBox1.DataSource = this.tasksBindingSource;
+            this.comboBox1.DisplayMember = "title";
             this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.Color.LemonChiffon;
             this.comboBox1.FormattingEnabled = true;
@@ -348,6 +358,25 @@ namespace IdeaCode.EditForms
             this.iconPictureBox1.TabIndex = 85;
             this.iconPictureBox1.TabStop = false;
             // 
+            // ideaCodeDataSet1
+            // 
+            this.ideaCodeDataSet1.DataSetName = "IdeaCodeDataSet1";
+            this.ideaCodeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ideaCodeDataSet1BindingSource
+            // 
+            this.ideaCodeDataSet1BindingSource.DataSource = this.ideaCodeDataSet1;
+            this.ideaCodeDataSet1BindingSource.Position = 0;
+            // 
+            // tasksBindingSource
+            // 
+            this.tasksBindingSource.DataMember = "Tasks";
+            this.tasksBindingSource.DataSource = this.ideaCodeDataSet1;
+            // 
+            // tasksTableAdapter
+            // 
+            this.tasksTableAdapter.ClearBeforeFill = true;
+            // 
             // EditFormSubmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,6 +405,7 @@ namespace IdeaCode.EditForms
             this.Controls.Add(this.iconPictureBox1);
             this.Name = "EditFormSubmission";
             this.Text = "Edit Submission";
+            this.Load += new System.EventHandler(this.EditFormSubmission_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTaskId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMemory)).EndInit();
@@ -386,6 +416,9 @@ namespace IdeaCode.EditForms
             ((System.ComponentModel.ISupportInitialize)(this.iconMemory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ideaCodeDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +446,9 @@ namespace IdeaCode.EditForms
         private FontAwesome.Sharp.IconButton iconButtonBack;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.BindingSource ideaCodeDataSet1BindingSource;
+        private IdeaCodeDataSet1 ideaCodeDataSet1;
+        private System.Windows.Forms.BindingSource tasksBindingSource;
+        private IdeaCodeDataSet1TableAdapters.TasksTableAdapter tasksTableAdapter;
     }
 }

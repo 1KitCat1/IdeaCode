@@ -93,7 +93,7 @@ namespace IdeaCode.OtherForms
             {
                 int end = start + 499;
                 int count = 0;
-                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-34VCO73\SQLEXPRESS;Initial Catalog=IdeaCode;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection(AppData.connectionString))
                 {
                     conn.Open();
                     string request = "SELECT count(id_user) FROM Users WHERE solved>=" + start.ToString() +
@@ -171,7 +171,10 @@ namespace IdeaCode.OtherForms
             using (SqlConnection conn = new SqlConnection(AppData.connectionString))
             {
                 conn.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT name, count(id_submission) FROM Compilers, Submissions WHERE Compilers.id_compiler = Submissions.id_compiler AND time_submission >= '"+fromDataString+"' AND time_submission <= '"+toDataString+"' GROUP BY name", conn);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT name, count(id_submission) FROM Compilers, " +
+                    "Submissions WHERE Compilers.id_compiler = Submissions.id_compiler AND time_submission >= '"
+                    + fromDataString + "' AND time_submission <= '"
+                    + toDataString + "' GROUP BY name", conn);
                 var dt = new DataTable();
                 
 
@@ -189,6 +192,7 @@ namespace IdeaCode.OtherForms
                     //error
                 }
                 conn.Close();
+                chartByCompilers.Series["Series1"].Points.Clear();
                 for (int i = 0; i < CompilersCount.Count; i++)
                 {
                     chartByCompilers.Series["Series1"].Points.AddXY(CompilersNames[i], CompilersCount[i]);

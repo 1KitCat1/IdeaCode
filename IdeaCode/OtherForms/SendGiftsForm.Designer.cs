@@ -292,7 +292,7 @@ namespace IdeaCode.OtherForms
             this.iconButtonNotify.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonNotify.IconSize = 30;
             this.iconButtonNotify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonNotify.Location = new System.Drawing.Point(705, 1106);
+            this.iconButtonNotify.Location = new System.Drawing.Point(684, 1498);
             this.iconButtonNotify.Name = "iconButtonNotify";
             this.iconButtonNotify.Size = new System.Drawing.Size(231, 45);
             this.iconButtonNotify.TabIndex = 38;
@@ -322,7 +322,7 @@ namespace IdeaCode.OtherForms
             this.iconButtonEditUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonEditUser.IconSize = 30;
             this.iconButtonEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonEditUser.Location = new System.Drawing.Point(756, 725);
+            this.iconButtonEditUser.Location = new System.Drawing.Point(735, 725);
             this.iconButtonEditUser.Name = "iconButtonEditUser";
             this.iconButtonEditUser.Size = new System.Drawing.Size(258, 45);
             this.iconButtonEditUser.TabIndex = 40;

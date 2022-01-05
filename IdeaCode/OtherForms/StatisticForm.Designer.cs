@@ -77,6 +77,8 @@ namespace IdeaCode.OtherForms
             this.chartCountProblemsByComplexity.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            series1.IsValueShownAsLabel = true;
             series1.LabelForeColor = System.Drawing.Color.Transparent;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
@@ -202,7 +204,9 @@ namespace IdeaCode.OtherForms
             this.chartByCompilers.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.LabelForeColor = System.Drawing.Color.Transparent;
+            series4.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            series4.IsValueShownAsLabel = true;
+            series4.LabelForeColor = System.Drawing.Color.SeaShell;
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             this.chartByCompilers.Series.Add(series4);

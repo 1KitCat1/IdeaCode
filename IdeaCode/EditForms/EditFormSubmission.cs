@@ -118,7 +118,7 @@ namespace IdeaCode.EditForms
             comboBoxVerdict.Text = verdictName;
             numericUpDownMemory.Value = usedSpace;
             numericUpDownTime.Value = usedTime;
-            numericUpDownTaskId.Value = idTask;
+            numericUpDownTaskId.Value = idSubmission;
             richTextBoxStatement.Text = code;
             dateTimePicker1.Value = timeOfSubmission;
         }
@@ -258,6 +258,13 @@ namespace IdeaCode.EditForms
                 }
                 conn.Close();
             }
+        }
+
+        private void EditFormSubmission_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ideaCodeDataSet1.Tasks' table. You can move, or remove it, as needed.
+            this.tasksTableAdapter.Fill(this.ideaCodeDataSet1.Tasks);
+
         }
     }
 }

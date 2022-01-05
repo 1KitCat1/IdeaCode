@@ -121,6 +121,7 @@ namespace IdeaCode.InfoForms
                 var fontBold = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, 1);
 
                 document.NewPage();
+                document.Add(new Paragraph("Created: " + DateTime.Now.ToString("g"), fontBold));
                 document.Add(new Paragraph("Id user: " + idUser, fontBold));
                 document.Add(new Paragraph("Username: " + userName, font));
                 document.Add(new Paragraph("Real name: " + realName, font));
